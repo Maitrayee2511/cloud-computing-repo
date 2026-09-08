@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Computing for Deep Learning</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#f7fbff;color:#172033;overflow:hidden}
+.slide{display:none;min-height:100vh;padding:55px 8vw 85px;position:relative}
+.slide.active{display:flex;flex-direction:column;justify-content:center}
+h1{font-size:clamp(38px,5vw,70px);margin:0 0 18px;color:#123b68}
+h2{font-size:clamp(30px,4vw,48px);margin:0 0 25px;color:#1769aa}
+h3{color:#1769aa;margin-bottom:8px}p,li{font-size:19px;line-height:1.55}
+.subtitle{font-size:24px;color:#54708d;max-width:900px}.name{margin-top:25px;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{background:white;border:1px solid #dbe9f5;border-radius:20px;padding:22px;box-shadow:0 8px 25px #bdd0df55;transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #9db9ce66}
+.icon{font-size:32px}.tag{display:inline-block;background:#e8f5ff;color:#1769aa;border-radius:30px;padding:7px 13px;font-weight:bold;margin:4px}
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:20px}.step{background:white;border:2px solid #b8dff7;border-radius:18px;padding:18px;min-width:145px;text-align:center;font-weight:700}.arrow{font-size:25px;color:#2396d8}
+.platform{border-top:5px solid #4aaee8}.big{font-size:25px;font-weight:700;color:#1769aa}
+img.diagram{max-width:70%;max-height:320px;object-fit:contain;display:block;margin:15px auto;border-radius:15px;box-shadow:0 8px 25px #9bb4c855}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:25px}.accent{background:linear-gradient(135deg,#eaf7ff,#fff);border-radius:25px;padding:30px}
+.nav{position:fixed;bottom:20px;left:0;right:0;display:flex;justify-content:center;gap:12px;z-index:10}.nav button{border:0;background:#1769aa;color:white;padding:11px 18px;border-radius:25px;cursor:pointer;font-weight:bold}.nav button:hover{background:#0f4e80}
+.counter{position:fixed;top:18px;right:25px;background:white;padding:8px 14px;border-radius:20px;box-shadow:0 4px 15px #9db4c855;color:#1769aa;font-weight:bold}.bar{position:fixed;top:0;left:0;height:5px;background:#42a5df;transition:.3s}
+@media(max-width:750px){.two{grid-template-columns:1fr}.slide{padding:35px 6vw 80px}p,li{font-size:16px}.flow{justify-content:center}img.diagram{max-width:95%}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div><div class="counter" id="counter"></div>
+
+<section class="slide active">
+<h1>Cloud Computing for Training and Deploying Deep Learning Models</h1>
+<p class="subtitle">Cloud infrastructure provides scalable computing power, storage and deployment services for Deep Learning.</p>
+<p class="name"><b>Maitrayee Gawde</b><br>M.Sc. Computer Science<br>Roll No. 11</p>
+<div><span class="tag">Cloud Computing</span><span class="tag">Deep Learning</span><span class="tag">AI/ML</span></div>
+</section>
+
+<section class="slide"><h2>Cloud Computing + Deep Learning</h2><div class="two">
+<div class="accent"><h3>☁️ Cloud Computing</h3><p>Delivery of servers, storage, networking and processing power over the Internet on demand.</p></div>
+<div class="accent"><h3>🧠 Deep Learning</h3><p>A branch of Machine Learning using multi-layered neural networks to learn complex patterns from large datasets.</p></div></div><p class="big">Cloud provides the infrastructure; Deep Learning provides the intelligence.</p></section>
+
+<section class="slide"><h2>Cloud-Based Deep Learning Workflow</h2><div class="flow">
+<div class="step">📊 Dataset</div><span class="arrow">→</span><div class="step">☁️ Cloud Storage</div><span class="arrow">→</span><div class="step">⚙️ Compute Selection</div><span class="arrow">→</span><div class="step">🧠 Model Training</div><span class="arrow">→</span><div class="step">🎯 Evaluation</div><span class="arrow">→</span><div class="step">🚀 Deployment</div>
+</div><p>Datasets can include images, text, audio or video. Cloud resources are selected according to workload.</p></section>
+
+<section class="slide"><h2>1–3. Data, Storage & Compute</h2><div class="grid">
+<div class="card"><div class="icon">📊</div><h3>Dataset</h3><p>Collect and prepare large datasets for training.</p></div>
+<div class="card"><div class="icon">☁️</div><h3>Cloud Storage</h3><p>Store data using scalable object storage such as Amazon S3, Azure Blob Storage or Google Cloud Storage.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>Compute Selection</h3><p>Choose CPU, GPU or TPU resources according to model complexity and workload.</p></div>
+</div></section>
+
+<section class="slide"><h2>4–7. Train, Tune & Evaluate</h2><div class="grid">
+<div class="card"><h3>🧠 Model Training</h3><p>Train neural networks using TensorFlow or PyTorch with cloud GPU/TPU acceleration.</p></div>
+<div class="card"><h3>🎛️ Hyperparameter Tuning</h3><p>Optimize learning rate, batch size, epochs and optimizer.</p></div>
+<div class="card"><h3>📈 Model Evaluation</h3><p>Evaluate using validation/test data and metrics such as accuracy, precision, recall and F1-score.</p></div>
+<div class="card"><h3>💾 Model Storage</h3><p>Store trained models, weights, configurations and results for versioning, deployment and retraining.</p></div>
+</div></section>
+
+<section class="slide"><h2>Benefits & Requirements</h2><div class="two">
+<div class="card"><h3>Benefits</h3><ul><li>Cost efficiency — pay based on usage</li><li>Scalability</li><li>Faster training with GPUs/TPUs</li><li>Large-scale storage</li><li>Accessibility from anywhere</li><li>Easy deployment</li></ul></div>
+<div class="card"><h3>Requirements</h3><ul><li>CPU/GPU/TPU computing power</li><li>Scalable storage</li><li>Reliable network</li><li>Security and access control</li><li>Monitoring</li><li>TensorFlow, PyTorch, Jupyter, Docker and cloud ML tools</li></ul></div>
+</div></section>
+
+<section class="slide"><h2>Cloud Platforms</h2><div class="grid">
+<div class="card platform"><h3>AWS</h3><p><b>SageMaker</b> — training, tuning and deployment<br><b>EC2</b> — GPU virtual machines<br><b>S3</b> — scalable storage</p><p><b>Best suited:</b> Flexible, large-scale workloads.</p></div>
+<div class="card platform"><h3>Microsoft Azure</h3><p><b>Azure Machine Learning</b> — managed ML platform<br><b>Virtual Machines</b> — GPU computing<br><b>Blob Storage</b> — datasets and models</p><p><b>Best suited:</b> Enterprise applications.</p></div>
+<div class="card platform"><h3>Google Cloud</h3><p><b>Vertex AI</b> — training, deployment and MLOps<br><b>Compute Engine</b> — GPU/TPU resources<br><b>Cloud Storage</b> — datasets and results</p><p><b>Best suited:</b> AI development and research.</p></div>
+</div></section>
+
+<section class="slide"><h2>How is a Trained Model Deployed?</h2><div class="grid">
+<div class="card"><h3>1. Virtual Machines</h3><p>Run the model on cloud servers such as EC2 or Azure VMs.</p></div>
+<div class="card"><h3>2. Containers</h3><p>Package the model, libraries and dependencies using Docker.</p></div>
+<div class="card"><h3>3. Managed ML Services</h3><p>Use SageMaker, Azure ML or Vertex AI for easier scaling.</p></div>
+<div class="card"><h3>4. Serverless</h3><p>Run lightweight inference without managing servers.</p></div>
+<div class="card"><h3>5. Model Serving</h3><p>Expose the deployed model through an API endpoint.</p></div>
+</div></section>
+
+<section class="slide"><h2>Real-World Example: Traffic Prediction</h2><p class="subtitle">A cloud-based Deep Learning system can predict travel time using real-time and historical traffic data.</p><div class="flow">
+<div class="step">📍 GPS Data</div><span class="arrow">→</span><div class="step">☁️ Cloud Storage</div><span class="arrow">→</span><div class="step">🧹 Preprocess</div><span class="arrow">→</span><div class="step">🧠 Train</div><span class="arrow">→</span><div class="step">🚀 Deploy</div><span class="arrow">→</span><div class="step">⏱️ Predict</div>
+</div></section>
+
+<section class="slide"><h2>Traffic Prediction — Complete Flow</h2><div class="two"><div><ol><li>Collect GPS, historical traffic, road-condition and user data.</li><li>Store datasets in cloud storage.</li><li>Clean and organize data by route, time, location and traffic.</li><li>Train using cloud GPUs/TPUs with TensorFlow or PyTorch.</li><li>Deploy using a managed ML service and expose an API.</li></ol></div><div class="accent"><h3>Example</h3><p>User selects:</p><p class="big">Mumbai → Thane</p><p>Cloud model analyzes current conditions.</p><p class="big">Predicted travel time: 70 minutes</p><p>New traffic data is continuously collected for retraining.</p></div></div></section>
+
+<section class="slide"><h2>Traffic Prediction — Model & Deployment</h2><img class="diagram" src="assets/Trained-model.png" alt="Trained model diagram"><p style="text-align:center">Trained model → Cloud deployment → API → Real-time prediction</p></section>
+
+<section class="slide"><h2>Traffic Prediction — Real-World Example</h2><img class="diagram" src="assets/Example.png" alt="Traffic prediction example"><p style="text-align:center">Cloud computing enables continuous prediction and retraining as new traffic data arrives.</p></section>
+
+<section class="slide"><h2>Challenges & Considerations</h2><div class="grid">
+<div class="card"><h3>💰 Cost Management</h3><p>GPU/TPU usage can become expensive.</p></div><div class="card"><h3>🔐 Privacy & Security</h3><p>Encryption, authentication and access control are important.</p></div><div class="card"><h3>🔗 Vendor Lock-In</h3><p>Applications can become dependent on one cloud provider.</p></div><div class="card"><h3>🌐 Network Dependency</h3><p>Large datasets require bandwidth; latency can affect inference.</p></div><div class="card"><h3>⚙️ Resource Management</h3><p>Correct CPU/GPU, storage and scaling choices matter.</p></div><div class="card"><h3>📈 Model Performance</h3><p>Models need monitoring, retraining and version management.</p></div>
+</div></section>
+
+<section class="slide"><h2>Conclusion</h2><div class="accent"><ul><li>Cloud computing provides scalable, on-demand infrastructure for Deep Learning.</li><li>GPUs and TPUs accelerate complex neural-network training.</li><li>Cloud storage supports large datasets, models and experiments.</li><li>Cloud platforms provide training, deployment, monitoring and scaling tools.</li><li>Models can be deployed as APIs and real-time applications.</li></ul><p class="big">Overall, cloud computing makes Deep Learning more accessible, flexible and scalable.</p></div></section>
+
+<section class="slide"><h1>Thank You!</h1><p class="subtitle">Questions?</p></section>
+
+<div class="nav"><button onclick="prev()">← Previous</button><button onclick="next()">Next →</button></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;
+function show(n){i=(n+slides.length)%slides.length;slides.forEach((s,k)=>s.classList.toggle('active',k===i));document.getElementById('counter').textContent=(i+1)+' / '+slides.length;document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%'}
+function next(){show(i+1)}function prev(){show(i-1)}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();next()}if(e.key==='ArrowLeft')prev()});show(0);
+</script>
+</body></html>
