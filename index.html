@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cloud Computing for Deep Learning</title>
+<title>Cloud Computing for Training and Deploying Deep Learning Models</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
@@ -33,15 +33,15 @@ html, body{
 }
 
 h1{
-  font-size:clamp(32px, 3.8vw, 52px);
+  font-size:clamp(30px, 3.6vw, 48px);
   margin:0 0 16px;
   color:#0f2942;
   font-weight:800;
-  line-height:1.15;
+  line-height:1.2;
 }
 
 h2{
-  font-size:clamp(26px, 3vw, 38px);
+  font-size:clamp(24px, 2.8vw, 36px);
   margin:0 0 20px;
   color:#1e40af;
   font-weight:700;
@@ -49,14 +49,14 @@ h2{
 }
 
 h3{
-  font-size:20px;
+  font-size:19px;
   color:#1e3a8a;
   margin:0 0 8px;
   font-weight:700;
 }
 
 p, li{
-  font-size:17px;
+  font-size:16px;
   line-height:1.5;
   color:#334155;
 }
@@ -124,7 +124,7 @@ li{
 
 .flow-container{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
   gap:12px;
   margin-top:10px;
 }
@@ -139,13 +139,13 @@ li{
 
 .flow-node h4{
   margin:0 0 4px;
-  font-size:16px;
+  font-size:15px;
   color:#1e40af;
 }
 
 .flow-node p{
   margin:0;
-  font-size:14px;
+  font-size:13px;
   line-height:1.35;
 }
 
@@ -161,17 +161,6 @@ li{
   font-weight:700;
   color:#1e40af;
   margin-top:10px;
-}
-
-img.diagram{
-  max-width:85%;
-  max-height:360px;
-  object-fit:contain;
-  display:block;
-  margin:10px auto;
-  border-radius:6px;
-  border:1px solid #cbd5e1;
-  background:#ffffff;
 }
 
 .footer-nav{
@@ -240,236 +229,217 @@ img.diagram{
 <div class="progress-bar" id="progressBar"></div>
 <div class="counter" id="slideCounter"></div>
 
-<!-- SLIDE 1: Title -->
+<!-- SLIDE 1 -->
 <section class="slide active">
   <h1>CLOUD COMPUTING FOR TRAINING AND DEPLOYING DEEP LEARNING MODELS</h1>
   
   <div class="author-box">
     <div class="author-name">Maitrayee Gawde</div>
-    <div class="author-details">M.Sc. Computer Science | Roll No. 11</div>
+    <div class="author-details">M.Sc. Computer Science | Roll no - 11</div>
   </div>
 
   <div class="accent-box">
-    <p><b>Cloud Computing:</b> On-demand access to virtualized compute, storage, and networking over the internet.</p>
-    <p><b>Deep Learning:</b> Multi-layered neural networks trained on large complex datasets.</p>
-    <div class="highlight">Cloud infrastructure provides the required hardware acceleration and scalable storage for DL workflows.</div>
+    <p><b>Cloud Computing:</b> The delivery of computing resources such as servers, storage, networking, and processing power over the Internet on an on-demand basis.</p>
+    <p><b>Deep Learning (DL):</b> A branch of Machine Learning that uses multi-layered neural networks to learn complex patterns from large datasets.</p>
+    <div class="highlight">Cloud provides the infrastructure; Deep Learning provides the intelligence.</div>
   </div>
 </section>
 
-<!-- SLIDE 2: Pipeline -->
+<!-- SLIDE 2 -->
 <section class="slide">
-  <h2>Deep Learning Pipeline in Cloud</h2>
+  <h2>Cloud-Based Deep Learning Workflow</h2>
   <div class="flow-container">
     <div class="flow-node">
-      <h4>1. Ingestion</h4>
-      <p>Collect structured and unstructured raw data streams.</p>
+      <h4>1. Dataset</h4>
+      <p>Collect and prepare large datasets such as images, text, audio, or video for model training.</p>
     </div>
     <div class="flow-node">
-      <h4>2. Storage</h4>
-      <p>Store datasets in cloud object stores (S3, Blob, GCS).</p>
+      <h4>2. Cloud Storage</h4>
+      <p>Store datasets in scalable object storage such as Amazon S3, Azure Blob Storage, or Google Cloud Storage.</p>
     </div>
     <div class="flow-node">
-      <h4>3. Processing</h4>
-      <p>Clean and format data using distributed ETL engines.</p>
+      <h4>3. Compute Selection</h4>
+      <p>Choose CPU, GPU, or TPU resources based on the model complexity and training workload.</p>
     </div>
     <div class="flow-node">
-      <h4>4. Provisioning</h4>
-      <p>Allocate GPU and TPU hardware resources.</p>
+      <h4>4. Model Training</h4>
+      <p>Train neural networks using frameworks such as TensorFlow or PyTorch with cloud-based GPU/TPU acceleration.</p>
     </div>
     <div class="flow-node">
-      <h4>5. Training</h4>
-      <p>Execute multi-node distributed model training.</p>
+      <h4>5. Hyperparameter Tuning</h4>
+      <p>Optimize parameters such as learning rate, batch size, epochs, and optimizer to improve performance.</p>
     </div>
     <div class="flow-node">
-      <h4>6. Optimization</h4>
-      <p>Apply hyperparameter search, pruning, and quantization.</p>
+      <h4>6. Model Evaluation</h4>
+      <p>Evaluate the model using validation/test data and metrics such as accuracy, precision, recall, and F1-score.</p>
     </div>
     <div class="flow-node">
-      <h4>7. Deployment</h4>
-      <p>Serve predictions via managed API endpoints.</p>
+      <h4>7. Model Storage</h4>
+      <p>Store the trained model, weights, configurations, and results for deployment, versioning, or retraining.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 3: Infrastructure -->
+<!-- SLIDE 3 -->
 <section class="slide">
-  <h2>Compute & Storage Architecture</h2>
+  <h2>Benefits & Requirements of Cloud-Based Deep Learning</h2>
   <div class="grid-2">
     <div class="card">
-      <h3>Compute Hardware</h3>
+      <h3>Benefits</h3>
       <ul>
-        <li><b>GPUs:</b> High parallel processing for tensor operations.</li>
-        <li><b>TPUs:</b> Google ASICs engineered for deep neural networks.</li>
-        <li><b>CPUs:</b> Preprocessing, orchestration, and light inference.</li>
-        <li><b>Scaling:</b> Data and Model Parallelism across nodes.</li>
+        <li><b>Cost Efficiency:</b> Pay for resources based on usage.</li>
+        <li><b>Scalability:</b> Increase or decrease computing resources as needed.</li>
+        <li><b>Faster Training:</b> Cloud GPUs/TPUs accelerate model training.</li>
+        <li><b>Large-Scale Storage:</b> Store and process massive datasets.</li>
+        <li><b>Accessibility:</b> Access models and resources from anywhere.</li>
+        <li><b>Easy Deployment:</b> Deploy trained models quickly as cloud services.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Storage Layer</h3>
+      <h3>Requirements</h3>
       <ul>
-        <li><b>Object Storage:</b> Low-cost storage for datasets and weights.</li>
-        <li><b>Block Storage:</b> Fast, low-latency drives for training loops.</li>
-        <li><b>Shared Filesystems:</b> High-throughput cluster access (e.g., EFS).</li>
+        <li><b>Computing Power:</b> CPUs, GPUs, or TPUs.</li>
+        <li><b>Storage:</b> Scalable cloud storage for datasets and models.</li>
+        <li><b>Network:</b> Reliable, high-speed connectivity.</li>
+        <li><b>Security:</b> Data protection, authentication, and access control.</li>
+        <li><b>Monitoring:</b> Track performance, resource usage, and model behavior.</li>
+        <li><b>Tools & Frameworks:</b> TensorFlow, PyTorch, Jupyter, Docker, and cloud ML services.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 4: Benefits & Requirements -->
+<!-- SLIDE 4 -->
 <section class="slide">
-  <h2>Benefits & Key Requirements</h2>
-  <div class="grid-2">
-    <div class="card">
-      <h3>Core Benefits</h3>
-      <ul>
-        <li><b>Cost Efficiency:</b> Pay-as-you-go pricing removes hardware CapEx.</li>
-        <li><b>Elasticity:</b> Scale compute resources up or down on demand.</li>
-        <li><b>Speed:</b> Faster iteration with high-performance hardware.</li>
-        <li><b>Reliability:</b> Built-in backups, redudancy, and high availability.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>System Requirements</h3>
-      <ul>
-        <li><b>Network Interconnects:</b> High-bandwidth fabrics for node syncing.</li>
-        <li><b>Data Security:</b> Role-based access (IAM) and encryption.</li>
-        <li><b>MLOps Stack:</b> Experiment tracking and lineage logging.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SLIDE 5: Ecosystem -->
-<section class="slide">
-  <h2>Major Cloud Providers</h2>
+  <h2>Cloud Platforms for Deep Learning Training & Deployment</h2>
   <div class="grid-3">
     <div class="card platform-card">
       <h3>AWS</h3>
-      <p><b>Platform:</b> Amazon SageMaker</p>
-      <p><b>Compute:</b> EC2 P4/P5 (NVIDIA GPUs), Trainium</p>
-      <p><b>Storage:</b> S3, FSx for Lustre</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> Large enterprise ML deployments.</p>
+      <p><b>1. Amazon SageMaker:</b> Managed service for training, tuning, and deploying Deep Learning models.</p>
+      <p><b>2. Amazon EC2:</b> GPU-enabled virtual machines for custom and large-scale model training.</p>
+      <p><b>3. Amazon S3:</b> Scalable storage for datasets, trained models, and checkpoints.</p>
+      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best suited for:</b> Flexible and large-scale Deep Learning workloads.</p>
     </div>
     <div class="card platform-card">
       <h3>Microsoft Azure</h3>
-      <p><b>Platform:</b> Azure Machine Learning</p>
-      <p><b>Compute:</b> NC & ND-Series GPU VMs</p>
-      <p><b>Storage:</b> Azure Blob Storage, Data Lake</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> Microsoft stack integration.</p>
+      <p><b>1. Azure Machine Learning:</b> Platform for model training, deployment, and MLOps.</p>
+      <p><b>2. Azure Virtual Machines:</b> Provides GPU-based computing for Deep Learning training.</p>
+      <p><b>3. Azure Blob Storage:</b> Stores large datasets, models, and training outputs.</p>
+      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best suited for:</b> Enterprise Deep Learning applications.</p>
     </div>
     <div class="card platform-card">
       <h3>Google Cloud</h3>
-      <p><b>Platform:</b> Vertex AI</p>
-      <p><b>Compute:</b> Cloud TPU v4/v5e, GPU instances</p>
-      <p><b>Storage:</b> Cloud Storage, BigQuery</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> TPU research & LLM training.</p>
+      <p><b>1. Vertex AI:</b> Managed platform for training, deploying, and monitoring ML/DL models.</p>
+      <p><b>2. Compute Engine:</b> Provides GPU and TPU resources for high performance training.</p>
+      <p><b>3. Cloud Storage:</b> Stores datasets, models, and experiment results.</p>
+      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best suited for:</b> AI development, research, and large-scale ML workloads.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 6: Deployment Paradigms -->
+<!-- SLIDE 5 -->
 <section class="slide">
-  <h2>Deployment Paradigms</h2>
+  <h2>Deploying Deep Learning Models in the Cloud</h2>
   <div class="grid">
     <div class="card">
       <h3>1. Virtual Machines</h3>
-      <p>Full OS control on IaaS (EC2/Azure VMs). Requires manual maintenance.</p>
+      <p>Run the trained model on cloud servers such as AWS EC2 or Azure Virtual Machines.</p>
     </div>
     <div class="card">
       <h3>2. Containers</h3>
-      <p>Package models with Docker; manage scaling via Kubernetes (EKS/GKE).</p>
+      <p>Package the model, libraries, and dependencies using Docker for consistent deployment.</p>
     </div>
     <div class="card">
-      <h3>3. Managed Endpoints</h3>
-      <p>Platform-managed hosting (SageMaker/Vertex) with auto-scaling.</p>
+      <h3>3. Managed ML Services</h3>
+      <p>Use platforms such as AWS SageMaker, Azure Machine Learning, or Google Vertex AI to simplify deployment and scaling.</p>
     </div>
     <div class="card">
-      <h3>4. Serverless</h3>
-      <p>On-demand execution (AWS Lambda) for infrequent, low-latency requests.</p>
+      <h3>4. Serverless Deployment</h3>
+      <p>Run lightweight inference tasks without managing the underlying servers.</p>
+    </div>
+    <div class="card" style="grid-column: 1 / -1;">
+      <h3>5. Model Serving</h3>
+      <p>After deployment, the model is exposed through an API endpoint.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 7: Traffic Case Study -->
+<!-- SLIDE 6 -->
 <section class="slide">
-  <h2>Case Study: Traffic Prediction System</h2>
+  <h2>Real-World Example: Traffic Prediction</h2>
   <div class="grid-2">
     <div class="card">
-      <h3>Training Pipeline</h3>
+      <h3>Pipeline Steps</h3>
       <ol>
-        <li>Stream telemetry data from GPS & road sensors.</li>
-        <li>Buffer incoming streams using Kafka/Kinesis.</li>
-        <li>Process tensors in Feature Store.</li>
-        <li>Train Spatial-Temporal GNN/LSTM models on GPUs.</li>
+        <li><b>Data Collection:</b> Collect data from GPS signals, historical traffic, road conditions, and user activity.</li>
+        <li><b>Cloud Storage:</b> Store large datasets using Amazon S3, Azure Blob Storage, or Google Cloud Storage.</li>
+        <li><b>Data Preprocessing:</b> Clean and organize GPS and traffic data based on route, time, location, and traffic conditions.</li>
+        <li><b>Model Training:</b> Train a Deep Learning model using cloud GPUs/TPUs with TensorFlow or PyTorch.</li>
+        <li><b>Model Deployment:</b> Deploy model using SageMaker, Azure ML, or Vertex AI, exposed through an API.</li>
       </ol>
     </div>
     <div class="accent-box">
-      <h3>Inference Loop</h3>
-      <p><b>Query:</b> Route Mumbai to Thane</p>
-      <p><b>Prediction:</b> 70 Minutes</p>
-      <p style="margin-top:12px;"><b>Feedback:</b> Actual arrival times trigger automated retraining when model accuracy drifts.</p>
+      <h3>Inference & Retraining</h3>
+      <p><b>6. Prediction:</b> User selects a route &rarr; Cloud model analyzes current conditions &rarr; Predicts travel time and traffic.</p>
+      <div class="highlight" style="margin:12px 0;">Example: Mumbai &rarr; Thane &rarr; Predicted travel time: 70 minutes</div>
+      <p><b>7. Retraining:</b> New traffic data is continuously collected to improve the model.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 8: Architecture Diagram -->
+<!-- SLIDE 7 -->
 <section class="slide">
-  <h2>Deployment Architecture</h2>
-  <img class="diagram" src="Trained-model.png" alt="Deployment Diagram">
-  <p style="text-align:center; font-weight:600; color:#1e40af; font-size:15px; margin-top:8px;">Training Pipeline &rarr; Cloud Deployment &rarr; API Gateway &rarr; Inference Endpoint</p>
-</section>
-
-<!-- SLIDE 9: Loop Diagram -->
-<section class="slide">
-  <h2>Continuous Learning Loop</h2>
-  <img class="diagram" src="Example.png" alt="Continuous Learning Diagram">
-  <p style="text-align:center; font-weight:600; color:#1e40af; font-size:15px; margin-top:8px;">Stream Processing &rarr; Real-Time Prediction &rarr; Data Storage &rarr; Auto-Retraining</p>
-</section>
-
-<!-- SLIDE 10: Technical Challenges -->
-<section class="slide">
-  <h2>Key Challenges</h2>
+  <h2>Challenges and Considerations</h2>
   <div class="grid">
     <div class="card">
-      <h3>Cost Control</h3>
-      <p>High hardware usage. Mitigate using Spot instances and auto-scaling.</p>
+      <h3>Cost Management</h3>
+      <p>GPU/TPU usage can become expensive during long training sessions or high-volume inference.</p>
     </div>
     <div class="card">
-      <h3>Latency & Bandwidth</h3>
-      <p>Large data movement costs time. APIs need under 100ms response times.</p>
+      <h3>Data Privacy & Security</h3>
+      <p>Sensitive datasets and trained models require encryption, authentication, and access control.</p>
     </div>
     <div class="card">
-      <h3>Data Security</h3>
-      <p>Requires strict IAM, encryption, and isolated VPC networks.</p>
+      <h3>Vendor Lock-In</h3>
+      <p>Models and applications may become dependent on services offered by a particular cloud provider.</p>
     </div>
     <div class="card">
-      <h3>Model Drift</h3>
-      <p>Accuracy degrades over time; requires continuous monitoring.</p>
+      <h3>Network Dependency</h3>
+      <p>Large datasets require high bandwidth, and network latency can affect data transfer and real-time inference.</p>
+    </div>
+    <div class="card">
+      <h3>Resource Management</h3>
+      <p>Choosing the right GPU/CPU, storage, and scaling configuration is important for performance and cost.</p>
+    </div>
+    <div class="card">
+      <h3>Model Performance</h3>
+      <p>Deployed models require continuous monitoring, retraining, and version management as data changes.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 11: Summary -->
+<!-- SLIDE 8 -->
 <section class="slide">
-  <h2>Summary</h2>
+  <h2>Conclusion</h2>
   <div class="accent-box">
     <ul>
-      <li>Cloud provides high-performance compute (GPUs/TPUs) on demand.</li>
-      <li>Elastic storage handles massive training datasets efficiently.</li>
-      <li>Managed platforms simplify MLOps from training to deployment.</li>
-      <li>Containerized & Serverless options enable flexible API hosting.</li>
+      <li>Cloud computing provides scalable and on-demand infrastructure for Deep Learning.</li>
+      <li>GPUs and TPUs enable faster training of complex neural networks.</li>
+      <li>Cloud storage supports large datasets, trained models, and experiment results.</li>
+      <li>Cloud platforms provide tools for training, deployment, monitoring, and scaling.</li>
+      <li>Deep Learning models can be deployed as APIs and real-time applications.</li>
     </ul>
-    <div class="highlight" style="margin-top:16px;">Cloud computing bridges the gap between AI research and production systems.</div>
+    <div class="highlight" style="margin-top:16px;">Overall, cloud computing makes Deep Learning more accessible, flexible, and scalable.</div>
   </div>
 </section>
 
-<!-- SLIDE 12: End Slide -->
+<!-- SLIDE 9 -->
 <section class="slide">
   <div style="text-align:center; margin:auto 0;">
     <h1 style="font-size:56px; color:#1e40af; margin-bottom:20px;">THANK YOU</h1>
     <div class="author-box" style="text-align:left; display:inline-block;">
       <div class="author-name">Maitrayee Gawde</div>
-      <div class="author-details">M.Sc. Computer Science | Roll No. 11</div>
+      <div class="author-details">M.Sc. Computer Science | Roll no - 11</div>
     </div>
   </div>
 </section>
