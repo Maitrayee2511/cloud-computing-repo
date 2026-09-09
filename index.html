@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cloud Computing for Training and Deploying Deep Learning Models</title>
+<title>Cloud Computing for Deep Learning</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
@@ -17,24 +17,23 @@ html, body{
   color:#0f172a;
   overflow-x:hidden;
   overflow-y:auto;
-  touch-action:pan-y;
 }
 
 .slide{
   display:none;
   min-height:100vh;
-  padding:50px 7vw 120px;
+  padding:40px 7vw 100px;
   position:relative;
 }
 
 .slide.active{
   display:flex;
   flex-direction:column;
-  justify-content:flex-start;
+  justify-content:center;
 }
 
 h1{
-  font-size:clamp(36px, 4vw, 58px);
+  font-size:clamp(32px, 3.8vw, 52px);
   margin:0 0 16px;
   color:#0f2942;
   font-weight:800;
@@ -42,7 +41,7 @@ h1{
 }
 
 h2{
-  font-size:clamp(28px, 3.2vw, 44px);
+  font-size:clamp(26px, 3vw, 38px);
   margin:0 0 20px;
   color:#1e40af;
   font-weight:700;
@@ -50,139 +49,128 @@ h2{
 }
 
 h3{
-  font-size:22px;
+  font-size:20px;
   color:#1e3a8a;
   margin:0 0 8px;
   font-weight:700;
 }
 
 p, li{
-  font-size:19px;
-  line-height:1.55;
+  font-size:17px;
+  line-height:1.5;
   color:#334155;
 }
 
 ul, ol{
-  margin:8px 0;
-  padding-left:24px;
+  margin:6px 0;
+  padding-left:20px;
 }
 
 li{
-  margin-bottom:8px;
-}
-
-.subtitle{
-  font-size:22px;
-  color:#475569;
-  max-width:1000px;
-  margin-bottom:16px;
+  margin-bottom:6px;
 }
 
 .author-box{
   background:#ffffff;
-  border-left:6px solid #1e40af;
-  padding:18px 24px;
-  border-radius:8px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.05);
-  margin:20px 0;
+  border-left:5px solid #1e40af;
+  padding:14px 20px;
+  border-radius:6px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.04);
+  margin:16px 0;
   display:inline-block;
 }
 
 .author-name{
-  font-size:22px;
+  font-size:20px;
   font-weight:700;
   color:#0f2942;
 }
 
 .author-details{
-  font-size:18px;
+  font-size:16px;
   color:#475569;
-  margin-top:4px;
+  margin-top:2px;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
 }
 
 .grid-3{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:18px;
+  gap:16px;
 }
 
 .grid-2{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:24px;
+  gap:20px;
 }
 
 .card{
   background:#ffffff;
   border:1px solid #cbd5e1;
-  border-radius:10px;
-  padding:22px;
-  box-shadow:0 4px 14px rgba(15, 23, 42, 0.05);
+  border-radius:8px;
+  padding:18px;
+  box-shadow:0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
 .platform-card{
-  border-top:5px solid #1e40af;
+  border-top:4px solid #1e40af;
 }
 
 .flow-container{
-  display:flex;
-  flex-wrap:wrap;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
   gap:12px;
-  margin-top:14px;
-  align-items:stretch;
+  margin-top:10px;
 }
 
 .flow-node{
   background:#ffffff;
-  border:2px solid #3b82f6;
-  border-radius:8px;
-  padding:14px 16px;
-  flex:1;
-  min-width:170px;
-  box-shadow:0 3px 10px rgba(0,0,0,0.04);
+  border:1px solid #3b82f6;
+  border-radius:6px;
+  padding:12px 14px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.03);
 }
 
 .flow-node h4{
-  margin:0 0 6px;
-  font-size:18px;
+  margin:0 0 4px;
+  font-size:16px;
   color:#1e40af;
 }
 
 .flow-node p{
   margin:0;
-  font-size:15px;
-  line-height:1.4;
+  font-size:14px;
+  line-height:1.35;
 }
 
 .accent-box{
   background:#eff6ff;
-  border:2px solid #bfdbfe;
-  border-radius:12px;
-  padding:24px;
+  border:1px solid #bfdbfe;
+  border-radius:8px;
+  padding:20px;
 }
 
-.big-text{
-  font-size:22px;
+.highlight{
+  font-size:18px;
   font-weight:700;
   color:#1e40af;
-  margin-top:12px;
+  margin-top:10px;
 }
 
 img.diagram{
-  max-width:80%;
-  max-height:340px;
+  max-width:85%;
+  max-height:360px;
   object-fit:contain;
   display:block;
-  margin:16px auto;
-  border-radius:8px;
+  margin:10px auto;
+  border-radius:6px;
   border:1px solid #cbd5e1;
-  box-shadow:0 6px 18px rgba(0,0,0,0.06);
   background:#ffffff;
 }
 
@@ -191,9 +179,9 @@ img.diagram{
   bottom:0;
   left:0;
   right:0;
-  height:70px;
-  background:rgba(255, 255, 255, 0.92);
-  backdrop-filter:blur(8px);
+  height:60px;
+  background:rgba(255, 255, 255, 0.95);
+  backdrop-filter:blur(6px);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -206,12 +194,11 @@ img.diagram{
   border:0;
   background:#1e40af;
   color:#ffffff;
-  padding:10px 24px;
-  border-radius:30px;
+  padding:8px 20px;
+  border-radius:20px;
   cursor:pointer;
-  font-size:17px;
+  font-size:15px;
   font-weight:700;
-  box-shadow:0 4px 12px rgba(30, 64, 175, 0.25);
 }
 
 .footer-nav button:hover{
@@ -220,16 +207,15 @@ img.diagram{
 
 .counter{
   position:fixed;
-  top:18px;
-  right:26px;
+  top:14px;
+  right:20px;
   background:#ffffff;
-  padding:6px 16px;
-  border-radius:20px;
+  padding:4px 12px;
+  border-radius:16px;
   border:1px solid #cbd5e1;
   color:#1e40af;
-  font-size:17px;
+  font-size:15px;
   font-weight:700;
-  box-shadow:0 2px 8px rgba(0,0,0,0.05);
   z-index:100;
 }
 
@@ -237,7 +223,7 @@ img.diagram{
   position:fixed;
   top:0;
   left:0;
-  height:5px;
+  height:4px;
   background:#2563eb;
   transition:width 0.3s ease;
   z-index:100;
@@ -245,8 +231,7 @@ img.diagram{
 
 @media(max-width:1024px){
   .grid-3, .grid-2{grid-template-columns:1fr;}
-  .slide{padding:30px 4vw 110px;}
-  p, li{font-size:17px;}
+  .slide{padding:24px 4vw 90px;}
 }
 </style>
 </head>
@@ -255,7 +240,7 @@ img.diagram{
 <div class="progress-bar" id="progressBar"></div>
 <div class="counter" id="slideCounter"></div>
 
-<!-- SLIDE 1: Title Slide -->
+<!-- SLIDE 1: Title -->
 <section class="slide active">
   <h1>CLOUD COMPUTING FOR TRAINING AND DEPLOYING DEEP LEARNING MODELS</h1>
   
@@ -265,240 +250,223 @@ img.diagram{
   </div>
 
   <div class="accent-box">
-    <p><b>Cloud Computing:</b> On-demand delivery of centralized computing resources, high-throughput network fabrics, and massive storage pools over the Internet.</p>
-    <p><b>Deep Learning (DL):</b> A subfield of Machine Learning utilizing deep multi-layered neural networks to learn hierarchical representations from complex, unstructured datasets.</p>
-    <div class="big-text">Cloud infrastructure delivers scalable compute and storage required to train and serve deep learning workloads efficiently.</div>
+    <p><b>Cloud Computing:</b> On-demand access to virtualized compute, storage, and networking over the internet.</p>
+    <p><b>Deep Learning:</b> Multi-layered neural networks trained on large complex datasets.</p>
+    <div class="highlight">Cloud infrastructure provides the required hardware acceleration and scalable storage for DL workflows.</div>
   </div>
 </section>
 
-<!-- SLIDE 2: End-to-End Pipeline -->
+<!-- SLIDE 2: Pipeline -->
 <section class="slide">
-  <h2>Cloud-Based Deep Learning Pipeline</h2>
+  <h2>Deep Learning Pipeline in Cloud</h2>
   <div class="flow-container">
     <div class="flow-node">
-      <h4>1. Data Ingestion</h4>
-      <p>Collect raw multi-modal datasets (images, video streams, textual logs, telemetry) from distributed sources.</p>
+      <h4>1. Ingestion</h4>
+      <p>Collect structured and unstructured raw data streams.</p>
     </div>
     <div class="flow-node">
-      <h4>2. Scalable Storage</h4>
-      <p>Store unstructured data in cloud object stores (Amazon S3, Azure Blob, GCS) with high availability.</p>
+      <h4>2. Storage</h4>
+      <p>Store datasets in cloud object stores (S3, Blob, GCS).</p>
     </div>
     <div class="flow-node">
-      <h4>3. Data Processing</h4>
-      <p>Clean, normalize, tokenize, and format datasets using distributed ETL pipelines (Spark, Ray Data).</p>
+      <h4>3. Processing</h4>
+      <p>Clean and format data using distributed ETL engines.</p>
     </div>
     <div class="flow-node">
-      <h4>4. Hardware Allocation</h4>
-      <p>Provision specialized hardware (NVIDIA H100/A100 GPUs, Google TPUs) tailored to training requirements.</p>
+      <h4>4. Provisioning</h4>
+      <p>Allocate GPU and TPU hardware resources.</p>
     </div>
-  </div>
-  <div class="flow-container" style="margin-top:12px;">
     <div class="flow-node">
-      <h4>5. Model Training</h4>
-      <p>Execute distributed training jobs across multi-GPU/multi-node clusters using PyTorch or TensorFlow.</p>
+      <h4>5. Training</h4>
+      <p>Execute multi-node distributed model training.</p>
     </div>
     <div class="flow-node">
       <h4>6. Optimization</h4>
-      <p>Perform automated hyperparameter tuning (Bayesian search) and model compression (quantization, pruning).</p>
+      <p>Apply hyperparameter search, pruning, and quantization.</p>
     </div>
     <div class="flow-node">
-      <h4>7. Deployment & Serving</h4>
-      <p>Register model artifacts and serve predictions via auto-scaling REST/gRPC API endpoints.</p>
+      <h4>7. Deployment</h4>
+      <p>Serve predictions via managed API endpoints.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 3: Infrastructure & Compute -->
+<!-- SLIDE 3: Infrastructure -->
 <section class="slide">
-  <h2>Compute Hardware & Storage Architecture</h2>
+  <h2>Compute & Storage Architecture</h2>
   <div class="grid-2">
     <div class="card">
-      <h3>Specialized Compute Accelerators</h3>
+      <h3>Compute Hardware</h3>
       <ul>
-        <li><b>GPUs (Graphics Processing Units):</b> Highly parallel architectures suited for matrix operations and tensor computations (e.g., NVIDIA A100, H100).</li>
-        <li><b>TPUs (Tensor Processing Units):</b> ASIC-based hardware engineered specifically by Google to accelerate matrix math in deep neural networks.</li>
-        <li><b>CPUs:</b> Used for data preprocessing, pipeline orchestration, and low-latency lightweight inference tasks.</li>
-        <li><b>Distributed Training:</b> Techniques like Data Parallelism and Model Parallelism enable scaling training across thousands of compute nodes.</li>
+        <li><b>GPUs:</b> High parallel processing for tensor operations.</li>
+        <li><b>TPUs:</b> Google ASICs engineered for deep neural networks.</li>
+        <li><b>CPUs:</b> Preprocessing, orchestration, and light inference.</li>
+        <li><b>Scaling:</b> Data and Model Parallelism across nodes.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Storage Infrastructure</h3>
+      <h3>Storage Layer</h3>
       <ul>
-        <li><b>Object Storage:</b> Cost-effective, high-capacity storage for unstructured datasets, raw media, and check-pointed weight files.</li>
-        <li><b>Block Storage:</b> High-IOPS persistent drives attached directly to compute instances for fast localized read/write access during training.</li>
-        <li><b>Shared File Systems:</b> Distributed file systems (e.g., AWS EFS, Azure NetApp) providing concurrent access across multi-node compute clusters.</li>
+        <li><b>Object Storage:</b> Low-cost storage for datasets and weights.</li>
+        <li><b>Block Storage:</b> Fast, low-latency drives for training loops.</li>
+        <li><b>Shared Filesystems:</b> High-throughput cluster access (e.g., EFS).</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 4: Benefits & System Requirements -->
+<!-- SLIDE 4: Benefits & Requirements -->
 <section class="slide">
-  <h2>Key Benefits & Technical Requirements</h2>
+  <h2>Benefits & Key Requirements</h2>
   <div class="grid-2">
     <div class="card">
-      <h3>Operational Benefits</h3>
+      <h3>Core Benefits</h3>
       <ul>
-        <li><b>Cost Optimization:</b> Elastic pay-as-you-go pricing models eliminate large upfront capital expenditure for hardware.</li>
-        <li><b>Elastic Scalability:</b> Dynamic provisioning of compute resources dynamically matches variable training workloads.</li>
-        <li><b>Accelerated Iteration:</b> High-throughput clusters reduce training times from weeks to hours or minutes.</li>
-        <li><b>Global Reach & Reliability:</b> Multi-region deployments ensure fault tolerance, automated backups, and low-latency serving.</li>
+        <li><b>Cost Efficiency:</b> Pay-as-you-go pricing removes hardware CapEx.</li>
+        <li><b>Elasticity:</b> Scale compute resources up or down on demand.</li>
+        <li><b>Speed:</b> Faster iteration with high-performance hardware.</li>
+        <li><b>Reliability:</b> Built-in backups, redudancy, and high availability.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>System & Operational Requirements</h3>
+      <h3>System Requirements</h3>
       <ul>
-        <li><b>High-Bandwidth Interconnects:</b> Fast network fabrics (e.g., AWS EFA, InfiniBand) to minimize latency during parameter synchronization.</li>
-        <li><b>Data Governance & Security:</b> Encryption at rest and in transit, Role-Based Access Control (RBAC), and regulatory compliance (HIPAA, GDPR).</li>
-        <li><b>MLOps Frameworks:</b> Tooling for experiment tracking, lineage management, automated retraining, and continuous monitoring.</li>
+        <li><b>Network Interconnects:</b> High-bandwidth fabrics for node syncing.</li>
+        <li><b>Data Security:</b> Role-based access (IAM) and encryption.</li>
+        <li><b>MLOps Stack:</b> Experiment tracking and lineage logging.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 5: Ecosystem Comparison -->
+<!-- SLIDE 5: Ecosystem -->
 <section class="slide">
-  <h2>Major Cloud Platforms for Deep Learning</h2>
+  <h2>Major Cloud Providers</h2>
   <div class="grid-3">
     <div class="card platform-card">
-      <h3>Amazon Web Services (AWS)</h3>
-      <p><b>Amazon SageMaker:</b> Fully managed platform for building, training, tuning, and hosting ML models.</p>
-      <p><b>EC2 Compute Instances:</b> GPU-accelerated instances (P4/P5 families with NVIDIA H100s, Trn1 Trainium instances).</p>
-      <p><b>Storage & Data Services:</b> Amazon S3 for object storage and FSx for Lustre for high-performance training input.</p>
-      <p style="margin-top:12px; color:#1e40af;"><b>Target Use Case:</b> Broadest ecosystem for enterprise and large-scale custom ML deployments.</p>
+      <h3>AWS</h3>
+      <p><b>Platform:</b> Amazon SageMaker</p>
+      <p><b>Compute:</b> EC2 P4/P5 (NVIDIA GPUs), Trainium</p>
+      <p><b>Storage:</b> S3, FSx for Lustre</p>
+      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> Large enterprise ML deployments.</p>
     </div>
     <div class="card platform-card">
       <h3>Microsoft Azure</h3>
-      <p><b>Azure Machine Learning:</b> Integrated enterprise platform supporting the entire MLOps lifecycle.</p>
-      <p><b>Virtual Machines:</b> N-series VM sizes equipped with NVIDIA GPUs for heavy AI computing.</p>
-      <p><b>Blob Storage & Data Lake:</b> Scalable storage integration with Enterprise Azure analytics tooling.</p>
-      <p style="margin-top:12px; color:#1e40af;"><b>Target Use Case:</b> Seamless integration with existing Microsoft enterprise software and hybrid cloud stacks.</p>
+      <p><b>Platform:</b> Azure Machine Learning</p>
+      <p><b>Compute:</b> NC & ND-Series GPU VMs</p>
+      <p><b>Storage:</b> Azure Blob Storage, Data Lake</p>
+      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> Microsoft stack integration.</p>
     </div>
     <div class="card platform-card">
-      <h3>Google Cloud Platform (GCP)</h3>
-      <p><b>Vertex AI:</b> Unified platform simplifying data engineering, training, and deployment workflows.</p>
-      <p><b>Compute Engine & TPUs:</b> Direct access to custom TPU v4/v5e pods and GPU instances for heavy parallelization.</p>
-      <p><b>Cloud Storage & BigQuery:</b> Deep integration with data warehousing and real-time analytics platforms.</p>
-      <p style="margin-top:12px; color:#1e40af;"><b>Target Use Case:</b> Advanced AI research, large language model training, and TPU acceleration.</p>
+      <h3>Google Cloud</h3>
+      <p><b>Platform:</b> Vertex AI</p>
+      <p><b>Compute:</b> Cloud TPU v4/v5e, GPU instances</p>
+      <p><b>Storage:</b> Cloud Storage, BigQuery</p>
+      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> TPU research & LLM training.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 6: Deployment Strategies -->
+<!-- SLIDE 6: Deployment Paradigms -->
 <section class="slide">
-  <h2>Model Deployment & Inference Paradigms</h2>
+  <h2>Deployment Paradigms</h2>
   <div class="grid">
     <div class="card">
-      <h3>1. Virtual Machines (IaaS)</h3>
-      <p>Deploy models directly onto instances like AWS EC2 or Azure VMs. Offers full OS control, but requires manual OS patching and scaling setup.</p>
+      <h3>1. Virtual Machines</h3>
+      <p>Full OS control on IaaS (EC2/Azure VMs). Requires manual maintenance.</p>
     </div>
     <div class="card">
-      <h3>2. Containerization (Docker / Kubernetes)</h3>
-      <p>Package the model, weights, and runtime dependencies inside Docker containers. Managed using Kubernetes (EKS, GKE) for high availability and load balancing.</p>
+      <h3>2. Containers</h3>
+      <p>Package models with Docker; manage scaling via Kubernetes (EKS/GKE).</p>
     </div>
     <div class="card">
-      <h3>3. Managed Endpoint Platforms</h3>
-      <p>Use platform-native serving capabilities (SageMaker Endpoints, Vertex AI Serving) that handle automated instance provisioning, scaling, and rolling updates.</p>
+      <h3>3. Managed Endpoints</h3>
+      <p>Platform-managed hosting (SageMaker/Vertex) with auto-scaling.</p>
     </div>
     <div class="card">
-      <h3>4. Serverless Inference</h3>
-      <p>Execute low-latency inference using serverless platforms (AWS Lambda, Azure Functions) where execution triggers on-demand without managing server uptime.</p>
-    </div>
-    <div class="card" style="grid-column: 1 / -1;">
-      <h3>5. Real-Time vs. Batch API Serving</h3>
-      <p>Expose models via RESTful APIs or high-performance gRPC channels. Real-time endpoint serving generates low-latency responses for interactive apps, while batch inference pipelines process large datasets offline asynchronously.</p>
+      <h3>4. Serverless</h3>
+      <p>On-demand execution (AWS Lambda) for infrequent, low-latency requests.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 7: Real-World Example -->
+<!-- SLIDE 7: Traffic Case Study -->
 <section class="slide">
-  <h2>Case Study: Real-Time Traffic Prediction System</h2>
+  <h2>Case Study: Traffic Prediction System</h2>
   <div class="grid-2">
     <div class="card">
-      <h3>End-to-End System Pipeline</h3>
+      <h3>Training Pipeline</h3>
       <ol>
-        <li><b>Data Ingestion:</b> Stream telemetry data from GPS devices, highway sensors, weather feeds, and historical traffic records.</li>
-        <li><b>Cloud Processing:</b> Ingest continuous data via stream queues (Apache Kafka, AWS Kinesis) into cloud storage.</li>
-        <li><b>Preprocessing & Feature Store:</b> Aggregates speed, route density, and time factors into clean numerical tensors.</li>
-        <li><b>Distributed Training:</b> Train a Spatial-Temporal Graph Neural Network or LSTM on cloud GPU instances.</li>
-        <li><b>Model Registration:</b> Version successful checkpoints into a centralized model registry.</li>
+        <li>Stream telemetry data from GPS & road sensors.</li>
+        <li>Buffer incoming streams using Kafka/Kinesis.</li>
+        <li>Process tensors in Feature Store.</li>
+        <li>Train Spatial-Temporal GNN/LSTM models on GPUs.</li>
       </ol>
     </div>
-    <div class="accent-box" style="display:flex; flex-direction:column; justify-content:center;">
-      <h3>Inference & Automated Retraining</h3>
-      <p><b>User Request:</b> Client application requests ETA for a specific route.</p>
-      <p><b>Inference Engine:</b> Served API endpoint evaluates current conditions against stored model weights.</p>
-      <div class="big-text">Query: Route Mumbai to Thane<br>Predicted Duration: 70 Minutes</div>
-      <p style="margin-top:16px;"><b>Feedback & Retraining Loop:</b> Actual arrival times are streamed back into cloud storage to trigger scheduled automated retraining cycles when accuracy drifts.</p>
+    <div class="accent-box">
+      <h3>Inference Loop</h3>
+      <p><b>Query:</b> Route Mumbai to Thane</p>
+      <p><b>Prediction:</b> 70 Minutes</p>
+      <p style="margin-top:12px;"><b>Feedback:</b> Actual arrival times trigger automated retraining when model accuracy drifts.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 8: Diagram 1 -->
+<!-- SLIDE 8: Architecture Diagram -->
 <section class="slide">
-  <h2>Traffic Prediction — Model & Deployment Architecture</h2>
-  <img class="diagram" src="Trained-model.png" alt="Trained model deployment pipeline diagram">
-  <p style="text-align:center; font-weight:600; color:#1e40af; margin-top:10px;">End-to-End Architecture: Model Training Pipeline -&gt; Cloud Deployment -&gt; API Gateway -&gt; Client Request/Response Handling</p>
+  <h2>Deployment Architecture</h2>
+  <img class="diagram" src="Trained-model.png" alt="Deployment Diagram">
+  <p style="text-align:center; font-weight:600; color:#1e40af; font-size:15px; margin-top:8px;">Training Pipeline &rarr; Cloud Deployment &rarr; API Gateway &rarr; Inference Endpoint</p>
 </section>
 
-<!-- SLIDE 9: Diagram 2 -->
+<!-- SLIDE 9: Loop Diagram -->
 <section class="slide">
-  <h2>Traffic Prediction — Continuous Learning Loop</h2>
-  <img class="diagram" src="Example.png" alt="Real-world traffic prediction example diagram">
-  <p style="text-align:center; font-weight:600; color:#1e40af; margin-top:10px;">Iterative Feedback Mechanism: Streaming Incoming Data -&gt; Real-Time Inference -&gt; Data Storage -&gt; Automated Retraining Loop</p>
+  <h2>Continuous Learning Loop</h2>
+  <img class="diagram" src="Example.png" alt="Continuous Learning Diagram">
+  <p style="text-align:center; font-weight:600; color:#1e40af; font-size:15px; margin-top:8px;">Stream Processing &rarr; Real-Time Prediction &rarr; Data Storage &rarr; Auto-Retraining</p>
 </section>
 
 <!-- SLIDE 10: Technical Challenges -->
 <section class="slide">
-  <h2>Technical & Operational Challenges</h2>
+  <h2>Key Challenges</h2>
   <div class="grid">
     <div class="card">
-      <h3>Cost Management</h3>
-      <p>Continuous GPU/TPU utilization incurs heavy costs. Mitigation strategies include using Spot/Preemptible instances and auto-scaling rules.</p>
+      <h3>Cost Control</h3>
+      <p>High hardware usage. Mitigate using Spot instances and auto-scaling.</p>
     </div>
     <div class="card">
-      <h3>Latency & Bandwidth Constraints</h3>
-      <p>Transferring multi-terabyte datasets to the cloud consumes network bandwidth. Inference APIs must maintain strict SLA latency limits (&lt;100ms).</p>
+      <h3>Latency & Bandwidth</h3>
+      <p>Large data movement costs time. APIs need under 100ms response times.</p>
     </div>
     <div class="card">
-      <h3>Data Security & Compliance</h3>
-      <p>Protecting proprietary model weights and sensitive training data requires rigorous IAM policies, network isolation (VPCs), and encryption.</p>
+      <h3>Data Security</h3>
+      <p>Requires strict IAM, encryption, and isolated VPC networks.</p>
     </div>
     <div class="card">
-      <h3>Vendor Lock-in</h3>
-      <p>Proprietary APIs and platform-specific services make migrating pipelines across different cloud providers challenging without containerization.</p>
-    </div>
-    <div class="card">
-      <h3>Model Drift & Monitoring</h3>
-      <p>Real-world data distribution shifts over time (concept drift). Continuous monitoring systems are required to track latency, throughput, and accuracy metrics.</p>
-    </div>
-    <div class="card">
-      <h3>Hardware & Resource Allocation</h3>
-      <p>Matching workload complexity to correct CPU/GPU/TPU specifications is critical to avoid hardware bottlenecks or underutilized capacity.</p>
+      <h3>Model Drift</h3>
+      <p>Accuracy degrades over time; requires continuous monitoring.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 11: Conclusion -->
+<!-- SLIDE 11: Summary -->
 <section class="slide">
-  <h2>Conclusion</h2>
+  <h2>Summary</h2>
   <div class="accent-box">
     <ul>
-      <li><b>Centralized Infrastructure:</b> Cloud platforms provide on-demand, highly scalable compute resources essential for modern deep learning workloads.</li>
-      <li><b>Hardware Acceleration:</b> High-performance GPUs and TPUs significantly accelerate model training and lower iteration cycles.</li>
-      <li><b>End-to-End MLOps:</b> Integrated cloud tooling streamlines data preparation, experiment management, model registry, and automated deployment.</li>
-      <li><b>Robust Deployment:</b> Flexible hosting options (Containers, Serverless, Managed Endpoints) allow serving models securely via APIs.</li>
-      <li><b>Continuous Improvement:</b> Streaming data architectures support real-time inference along with feedback loops for automated retraining.</li>
+      <li>Cloud provides high-performance compute (GPUs/TPUs) on demand.</li>
+      <li>Elastic storage handles massive training datasets efficiently.</li>
+      <li>Managed platforms simplify MLOps from training to deployment.</li>
+      <li>Containerized & Serverless options enable flexible API hosting.</li>
     </ul>
-    <div class="big-text" style="margin-top:20px;">Cloud computing transforms Deep Learning from isolated research experiments into scalable, enterprise-grade production systems.</div>
+    <div class="highlight" style="margin-top:16px;">Cloud computing bridges the gap between AI research and production systems.</div>
   </div>
 </section>
 
-<!-- SLIDE 12: Thank You -->
+<!-- SLIDE 12: End Slide -->
 <section class="slide">
   <div style="text-align:center; margin:auto 0;">
-    <h1 style="font-size:64px; color:#1e40af; margin-bottom:20px;">THANK YOU</h1>
+    <h1 style="font-size:56px; color:#1e40af; margin-bottom:20px;">THANK YOU</h1>
     <div class="author-box" style="text-align:left; display:inline-block;">
       <div class="author-name">Maitrayee Gawde</div>
       <div class="author-details">M.Sc. Computer Science | Roll No. 11</div>
