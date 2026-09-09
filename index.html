@@ -8,25 +8,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
 *{box-sizing:border-box}
-body{
+html, body{
   margin:0;
+  padding:0;
+  min-height:100%;
   font-family:'Inter', Arial, Helvetica, sans-serif;
   background:#f4f7fa;
   color:#0f172a;
-  overflow:hidden;
+  overflow-x:hidden;
+  overflow-y:auto;
+  touch-action:pan-y;
 }
 
 .slide{
   display:none;
   min-height:100vh;
-  padding:50px 7vw 90px;
+  padding:50px 7vw 120px;
   position:relative;
 }
 
 .slide.active{
   display:flex;
   flex-direction:column;
-  justify-content:center;
+  justify-content:flex-start;
 }
 
 h1{
@@ -184,13 +188,18 @@ img.diagram{
 
 .footer-nav{
   position:fixed;
-  bottom:18px;
+  bottom:0;
   left:0;
   right:0;
+  height:70px;
+  background:rgba(255, 255, 255, 0.92);
+  backdrop-filter:blur(8px);
   display:flex;
   justify-content:center;
+  align-items:center;
   gap:16px;
   z-index:100;
+  border-top:1px solid #cbd5e1;
 }
 
 .footer-nav button{
@@ -221,6 +230,7 @@ img.diagram{
   font-size:17px;
   font-weight:700;
   box-shadow:0 2px 8px rgba(0,0,0,0.05);
+  z-index:100;
 }
 
 .progress-bar{
@@ -235,7 +245,7 @@ img.diagram{
 
 @media(max-width:1024px){
   .grid-3, .grid-2{grid-template-columns:1fr;}
-  .slide{padding:30px 4vw 80px;}
+  .slide{padding:30px 4vw 110px;}
   p, li{font-size:17px;}
 }
 </style>
@@ -487,9 +497,8 @@ img.diagram{
 
 <!-- SLIDE 12: Thank You -->
 <section class="slide">
-  <div style="text-align:center;">
-    <h1 style="font-size:64px; color:#1e40af; margin-bottom:10px;">THANK YOU</h1>
-    <p class="subtitle" style="margin:10px auto 30px;">Questions & Academic Discussion</p>
+  <div style="text-align:center; margin:auto 0;">
+    <h1 style="font-size:64px; color:#1e40af; margin-bottom:20px;">THANK YOU</h1>
     <div class="author-box" style="text-align:left; display:inline-block;">
       <div class="author-name">Maitrayee Gawde</div>
       <div class="author-details">M.Sc. Computer Science | Roll No. 11</div>
