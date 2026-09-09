@@ -73,6 +73,16 @@ li{
   margin-bottom:8px;
 }
 
+.slide-img{
+  width:100%;
+  max-height:220px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  margin-bottom:18px;
+  box-shadow:0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
 .author-box{
   background:#ffffff;
   border-left:6px solid #1e40af;
@@ -125,32 +135,34 @@ li{
   border-top:5px solid #1e40af;
 }
 
-.flow-container{
+/* Slide 2 Specific Styling - Larger Text */
+#slide2 .flow-container{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:14px;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:16px;
   margin-top:12px;
 }
 
-.flow-node{
+#slide2 .flow-node{
   background:#ffffff;
-  border:1px solid #3b82f6;
-  border-radius:8px;
-  padding:14px 16px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.03);
+  border:1.5px solid #2563eb;
+  border-radius:10px;
+  padding:18px 20px;
+  box-shadow:0 4px 12px rgba(37, 99, 235, 0.06);
 }
 
-.flow-node h4{
-  margin:0 0 6px;
-  font-size:16px;
+#slide2 .flow-node h4{
+  margin:0 0 8px;
+  font-size:22px;
   color:#1e40af;
-  font-weight:700;
+  font-weight:800;
 }
 
-.flow-node p{
+#slide2 .flow-node p{
   margin:0;
-  font-size:15px;
-  line-height:1.45;
+  font-size:18px;
+  line-height:1.55;
+  color:#1e293b;
 }
 
 .accent-box{
@@ -226,6 +238,7 @@ li{
 @media(max-width:1024px){
   .grid-3, .grid-2{grid-template-columns:1fr;}
   .slide{padding:30px 5vw 95px;}
+  #slide2 .flow-container{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -238,6 +251,8 @@ li{
 <section class="slide active">
   <h1>CLOUD COMPUTING FOR TRAINING AND DEPLOYING DEEP LEARNING MODELS</h1>
   
+  <img src="image_agent_tag_8796354423227653309" alt="Cloud Computing and Deep Learning" class="slide-img" style="max-height: 200px;">
+
   <div class="author-box">
     <div class="author-name">Maitrayee Gawde</div>
     <div class="author-details">M.Sc. Computer Science | Roll no - 11</div>
@@ -250,9 +265,12 @@ li{
   </div>
 </section>
 
-<!-- SLIDE 2 -->
-<section class="slide">
+<!-- SLIDE 2: Larger Font & Image Added -->
+<section class="slide" id="slide2">
   <h2>Cloud-Based Deep Learning Workflow</h2>
+  
+  <img src="image_agent_tag_8796354423227653066" alt="Deep Learning Neural Network Diagram" class="slide-img" style="max-height: 160px;">
+
   <div class="flow-container">
     <div class="flow-node">
       <h4>1. Dataset</h4>
@@ -317,6 +335,8 @@ li{
 <!-- SLIDE 4 -->
 <section class="slide">
   <h2>Cloud Platforms for Deep Learning Training & Deployment</h2>
+  <img src="image_agent_tag_8796354423227653228" alt="Cloud Platforms Logos" class="slide-img" style="max-height: 160px;">
+  
   <div class="grid-3">
     <div class="card platform-card">
       <h3>AWS</h3>
@@ -372,6 +392,8 @@ li{
 <!-- SLIDE 6 -->
 <section class="slide">
   <h2>Real-World Example: Traffic Prediction</h2>
+  <img src="image_agent_tag_8796354423227653147" alt="Traffic Prediction Map System" class="slide-img" style="max-height: 160px;">
+  
   <div class="grid-2">
     <div class="card">
       <h3>Pipeline Steps</h3>
