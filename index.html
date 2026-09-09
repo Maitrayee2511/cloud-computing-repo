@@ -70,6 +70,40 @@ li{
   margin-bottom:6px;
 }
 
+/* Image Styles */
+.hero-img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 16px 0;
+  border: 1px solid #cbd5e1;
+}
+
+.card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.platform-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.flow-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
 .author-box{
   background:#ffffff;
   border-left:5px solid #1e40af;
@@ -238,6 +272,9 @@ li{
     <div class="author-details">M.Sc. Computer Science | Roll no - 11</div>
   </div>
 
+  <!-- Title Banner Image -->
+  <img src="images/cloud_dl_hero.png" alt="Cloud Deep Learning Architecture Banner" class="hero-img">
+
   <div class="accent-box">
     <p><b>Cloud Computing:</b> The delivery of computing resources such as servers, storage, networking, and processing power over the Internet on an on-demand basis.</p>
     <p><b>Deep Learning (DL):</b> A branch of Machine Learning that uses multi-layered neural networks to learn complex patterns from large datasets.</p>
@@ -248,32 +285,43 @@ li{
 <!-- SLIDE 2 -->
 <section class="slide">
   <h2>Cloud-Based Deep Learning Workflow</h2>
+  
+  <!-- Workflow Diagram Visual -->
+  <img src="images/dl_workflow_diagram.png" alt="Deep Learning Cloud Workflow Overview" class="hero-img">
+
   <div class="flow-container">
     <div class="flow-node">
+      <img src="images/icons/dataset.png" alt="Dataset Icon" class="flow-icon">
       <h4>1. Dataset</h4>
       <p>Collect and prepare large datasets such as images, text, audio, or video for model training.</p>
     </div>
     <div class="flow-node">
+      <img src="images/icons/storage.png" alt="Storage Icon" class="flow-icon">
       <h4>2. Cloud Storage</h4>
       <p>Store datasets in scalable object storage such as Amazon S3, Azure Blob Storage, or Google Cloud Storage.</p>
     </div>
     <div class="flow-node">
+      <img src="images/icons/gpu.png" alt="Compute Icon" class="flow-icon">
       <h4>3. Compute Selection</h4>
       <p>Choose CPU, GPU, or TPU resources based on the model complexity and training workload.</p>
     </div>
     <div class="flow-node">
+      <img src="images/icons/training.png" alt="Training Icon" class="flow-icon">
       <h4>4. Model Training</h4>
       <p>Train neural networks using frameworks such as TensorFlow or PyTorch with cloud-based GPU/TPU acceleration.</p>
     </div>
     <div class="flow-node">
+      <img src="images/icons/tuning.png" alt="Tuning Icon" class="flow-icon">
       <h4>5. Hyperparameter Tuning</h4>
       <p>Optimize parameters such as learning rate, batch size, epochs, and optimizer to improve performance.</p>
     </div>
     <div class="flow-node">
+      <img src="images/icons/eval.png" alt="Evaluation Icon" class="flow-icon">
       <h4>6. Model Evaluation</h4>
       <p>Evaluate the model using validation/test data and metrics such as accuracy, precision, recall, and F1-score.</p>
     </div>
     <div class="flow-node">
+      <img src="images/icons/deploy_store.png" alt="Storage Icon" class="flow-icon">
       <h4>7. Model Storage</h4>
       <p>Store the trained model, weights, configurations, and results for deployment, versioning, or retraining.</p>
     </div>
@@ -285,6 +333,7 @@ li{
   <h2>Benefits & Requirements of Cloud-Based Deep Learning</h2>
   <div class="grid-2">
     <div class="card">
+      <img src="images/benefits_illustration.png" alt="Cloud Benefits" class="card-img">
       <h3>Benefits</h3>
       <ul>
         <li><b>Cost Efficiency:</b> Pay for resources based on usage.</li>
@@ -296,6 +345,7 @@ li{
       </ul>
     </div>
     <div class="card">
+      <img src="images/requirements_illustration.png" alt="Cloud Requirements" class="card-img">
       <h3>Requirements</h3>
       <ul>
         <li><b>Computing Power:</b> CPUs, GPUs, or TPUs.</li>
@@ -314,6 +364,7 @@ li{
   <h2>Cloud Platforms for Deep Learning Training & Deployment</h2>
   <div class="grid-3">
     <div class="card platform-card">
+      <img src="images/aws_logo.png" alt="AWS Logo" class="platform-logo">
       <h3>AWS</h3>
       <p><b>1. Amazon SageMaker:</b> Managed service for training, tuning, and deploying Deep Learning models.</p>
       <p><b>2. Amazon EC2:</b> GPU-enabled virtual machines for custom and large-scale model training.</p>
@@ -321,6 +372,7 @@ li{
       <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best suited for:</b> Flexible and large-scale Deep Learning workloads.</p>
     </div>
     <div class="card platform-card">
+      <img src="images/azure_logo.png" alt="Microsoft Azure Logo" class="platform-logo">
       <h3>Microsoft Azure</h3>
       <p><b>1. Azure Machine Learning:</b> Platform for model training, deployment, and MLOps.</p>
       <p><b>2. Azure Virtual Machines:</b> Provides GPU-based computing for Deep Learning training.</p>
@@ -328,6 +380,7 @@ li{
       <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best suited for:</b> Enterprise Deep Learning applications.</p>
     </div>
     <div class="card platform-card">
+      <img src="images/gcp_logo.png" alt="Google Cloud Logo" class="platform-logo">
       <h3>Google Cloud</h3>
       <p><b>1. Vertex AI:</b> Managed platform for training, deploying, and monitoring ML/DL models.</p>
       <p><b>2. Compute Engine:</b> Provides GPU and TPU resources for high performance training.</p>
@@ -342,22 +395,27 @@ li{
   <h2>Deploying Deep Learning Models in the Cloud</h2>
   <div class="grid">
     <div class="card">
+      <img src="images/deployment_vm.png" alt="Virtual Machines" class="card-img">
       <h3>1. Virtual Machines</h3>
       <p>Run the trained model on cloud servers such as AWS EC2 or Azure Virtual Machines.</p>
     </div>
     <div class="card">
+      <img src="images/deployment_docker.png" alt="Containers Docker" class="card-img">
       <h3>2. Containers</h3>
       <p>Package the model, libraries, and dependencies using Docker for consistent deployment.</p>
     </div>
     <div class="card">
+      <img src="images/deployment_managed.png" alt="Managed Services" class="card-img">
       <h3>3. Managed ML Services</h3>
       <p>Use platforms such as AWS SageMaker, Azure Machine Learning, or Google Vertex AI to simplify deployment and scaling.</p>
     </div>
     <div class="card">
+      <img src="images/deployment_serverless.png" alt="Serverless Architecture" class="card-img">
       <h3>4. Serverless Deployment</h3>
       <p>Run lightweight inference tasks without managing the underlying servers.</p>
     </div>
     <div class="card" style="grid-column: 1 / -1;">
+      <img src="images/api_serving.png" alt="Model Serving via API Endpoint" class="card-img" style="max-height:180px;">
       <h3>5. Model Serving</h3>
       <p>After deployment, the model is exposed through an API endpoint.</p>
     </div>
@@ -379,6 +437,7 @@ li{
       </ol>
     </div>
     <div class="accent-box">
+      <img src="images/traffic_prediction_map.png" alt="Traffic Prediction Map Mumbai to Thane" class="hero-img" style="max-height:180px;">
       <h3>Inference & Retraining</h3>
       <p><b>6. Prediction:</b> User selects a route &rarr; Cloud model analyzes current conditions &rarr; Predicts travel time and traffic.</p>
       <div class="highlight" style="margin:12px 0;">Example: Mumbai &rarr; Thane &rarr; Predicted travel time: 70 minutes</div>
@@ -392,26 +451,32 @@ li{
   <h2>Challenges and Considerations</h2>
   <div class="grid">
     <div class="card">
+      <img src="images/icons/cost.png" alt="Cost Management" class="flow-icon">
       <h3>Cost Management</h3>
       <p>GPU/TPU usage can become expensive during long training sessions or high-volume inference.</p>
     </div>
     <div class="card">
+      <img src="images/icons/security.png" alt="Data Security" class="flow-icon">
       <h3>Data Privacy & Security</h3>
       <p>Sensitive datasets and trained models require encryption, authentication, and access control.</p>
     </div>
     <div class="card">
+      <img src="images/icons/lockin.png" alt="Vendor Lock-in" class="flow-icon">
       <h3>Vendor Lock-In</h3>
       <p>Models and applications may become dependent on services offered by a particular cloud provider.</p>
     </div>
     <div class="card">
+      <img src="images/icons/network.png" alt="Network Latency" class="flow-icon">
       <h3>Network Dependency</h3>
       <p>Large datasets require high bandwidth, and network latency can affect data transfer and real-time inference.</p>
     </div>
     <div class="card">
+      <img src="images/icons/resources.png" alt="Resource Management" class="flow-icon">
       <h3>Resource Management</h3>
       <p>Choosing the right GPU/CPU, storage, and scaling configuration is important for performance and cost.</p>
     </div>
     <div class="card">
+      <img src="images/icons/performance.png" alt="Model Performance" class="flow-icon">
       <h3>Model Performance</h3>
       <p>Deployed models require continuous monitoring, retraining, and version management as data changes.</p>
     </div>
@@ -421,6 +486,7 @@ li{
 <!-- SLIDE 8 -->
 <section class="slide">
   <h2>Conclusion</h2>
+  <img src="images/cloud_ai_summary.png" alt="Cloud AI Overview Summary" class="hero-img">
   <div class="accent-box">
     <ul>
       <li>Cloud computing provides scalable and on-demand infrastructure for Deep Learning.</li>
