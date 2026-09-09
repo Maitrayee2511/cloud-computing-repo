@@ -12,17 +12,18 @@ html, body{
   margin:0;
   padding:0;
   min-height:100%;
-  font-family:'Inter', Arial, Helvetica, sans-serif;
-  background:#f4f7fa;
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background:#f8fafc;
   color:#0f172a;
   overflow-x:hidden;
   overflow-y:auto;
+  -webkit-font-smoothing:antialiased;
 }
 
 .slide{
   display:none;
   min-height:100vh;
-  padding:40px 7vw 100px;
+  padding:40px 7vw 110px;
   position:relative;
 }
 
@@ -33,168 +34,147 @@ html, body{
 }
 
 h1{
-  font-size:clamp(30px, 3.6vw, 48px);
+  font-size:clamp(32px, 3.8vw, 50px);
   margin:0 0 16px;
   color:#0f2942;
   font-weight:800;
   line-height:1.2;
+  letter-spacing:-0.02em;
 }
 
 h2{
-  font-size:clamp(24px, 2.8vw, 36px);
-  margin:0 0 20px;
+  font-size:clamp(26px, 3vw, 38px);
+  margin:0 0 22px;
   color:#1e40af;
   font-weight:700;
-  line-height:1.2;
+  line-height:1.25;
+  letter-spacing:-0.01em;
 }
 
 h3{
-  font-size:19px;
+  font-size:20px;
   color:#1e3a8a;
-  margin:0 0 8px;
+  margin:0 0 10px;
   font-weight:700;
 }
 
 p, li{
-  font-size:16px;
-  line-height:1.5;
+  font-size:18px;
+  line-height:1.6;
   color:#334155;
 }
 
 ul, ol{
-  margin:6px 0;
-  padding-left:20px;
+  margin:8px 0;
+  padding-left:22px;
 }
 
 li{
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
 
-/* Image Styles */
-.hero-img {
-  width: 100%;
-  max-height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 16px 0;
-  border: 1px solid #cbd5e1;
-}
-
-.card-img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  border: 1px solid #e2e8f0;
-}
-
-.platform-logo {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.flow-icon {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  margin-bottom: 8px;
+.slide-img{
+  width:100%;
+  max-height:220px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  margin-bottom:18px;
+  box-shadow:0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
 .author-box{
   background:#ffffff;
-  border-left:5px solid #1e40af;
-  padding:14px 20px;
-  border-radius:6px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.04);
-  margin:16px 0;
+  border-left:6px solid #1e40af;
+  padding:16px 22px;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(15, 23, 42, 0.05);
+  margin:20px 0;
   display:inline-block;
 }
 
 .author-name{
-  font-size:20px;
+  font-size:22px;
   font-weight:700;
   color:#0f2942;
 }
 
 .author-details{
-  font-size:16px;
+  font-size:17px;
   color:#475569;
-  margin-top:2px;
+  margin-top:4px;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-  gap:16px;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:18px;
 }
 
 .grid-3{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:16px;
+  gap:18px;
 }
 
 .grid-2{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:20px;
+  gap:22px;
 }
 
 .card{
   background:#ffffff;
   border:1px solid #cbd5e1;
-  border-radius:8px;
-  padding:18px;
-  box-shadow:0 2px 8px rgba(15, 23, 42, 0.04);
+  border-radius:10px;
+  padding:20px 22px;
+  box-shadow:0 3px 10px rgba(15, 23, 42, 0.04);
 }
 
 .platform-card{
-  border-top:4px solid #1e40af;
+  border-top:5px solid #1e40af;
 }
 
 .flow-container{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-  gap:12px;
-  margin-top:10px;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:14px;
+  margin-top:12px;
 }
 
 .flow-node{
   background:#ffffff;
   border:1px solid #3b82f6;
-  border-radius:6px;
-  padding:12px 14px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.03);
+  border-radius:8px;
+  padding:14px 16px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.03);
 }
 
 .flow-node h4{
-  margin:0 0 4px;
-  font-size:15px;
+  margin:0 0 6px;
+  font-size:16px;
   color:#1e40af;
+  font-weight:700;
 }
 
 .flow-node p{
   margin:0;
-  font-size:13px;
-  line-height:1.35;
+  font-size:15px;
+  line-height:1.45;
 }
 
 .accent-box{
   background:#eff6ff;
-  border:1px solid #bfdbfe;
-  border-radius:8px;
-  padding:20px;
+  border:1.5px solid #bfdbfe;
+  border-radius:10px;
+  padding:22px;
 }
 
 .highlight{
-  font-size:18px;
+  font-size:19px;
   font-weight:700;
   color:#1e40af;
-  margin-top:10px;
+  margin-top:12px;
 }
 
 .footer-nav{
@@ -202,9 +182,9 @@ li{
   bottom:0;
   left:0;
   right:0;
-  height:60px;
-  background:rgba(255, 255, 255, 0.95);
-  backdrop-filter:blur(6px);
+  height:65px;
+  background:rgba(255, 255, 255, 0.96);
+  backdrop-filter:blur(8px);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -217,10 +197,10 @@ li{
   border:0;
   background:#1e40af;
   color:#ffffff;
-  padding:8px 20px;
-  border-radius:20px;
+  padding:10px 24px;
+  border-radius:24px;
   cursor:pointer;
-  font-size:15px;
+  font-size:16px;
   font-weight:700;
 }
 
@@ -230,16 +210,17 @@ li{
 
 .counter{
   position:fixed;
-  top:14px;
-  right:20px;
+  top:16px;
+  right:22px;
   background:#ffffff;
-  padding:4px 12px;
-  border-radius:16px;
+  padding:6px 14px;
+  border-radius:20px;
   border:1px solid #cbd5e1;
   color:#1e40af;
   font-size:15px;
   font-weight:700;
   z-index:100;
+  box-shadow:0 2px 6px rgba(0,0,0,0.04);
 }
 
 .progress-bar{
@@ -254,7 +235,7 @@ li{
 
 @media(max-width:1024px){
   .grid-3, .grid-2{grid-template-columns:1fr;}
-  .slide{padding:24px 4vw 90px;}
+  .slide{padding:30px 5vw 95px;}
 }
 </style>
 </head>
@@ -272,8 +253,6 @@ li{
     <div class="author-details">M.Sc. Computer Science | Roll no - 11</div>
   </div>
 
-  <img src="images/cloud_dl_hero.png" alt="Cloud Deep Learning Architecture Banner" class="hero-img">
-
   <div class="accent-box">
     <p><b>Cloud Computing:</b> The delivery of computing resources such as servers, storage, networking, and processing power over the Internet on an on-demand basis.</p>
     <p><b>Deep Learning (DL):</b> A branch of Machine Learning that uses multi-layered neural networks to learn complex patterns from large datasets.</p>
@@ -284,43 +263,32 @@ li{
 <!-- SLIDE 2 -->
 <section class="slide">
   <h2>Cloud-Based Deep Learning Workflow</h2>
-  
-  <!-- Architecture Diagram with trained-model.png -->
-  <img src="images/trained-model.png" alt="Deep Learning Architecture & Trained Model Workflow" class="hero-img">
-
   <div class="flow-container">
     <div class="flow-node">
-      <img src="images/icons/dataset.png" alt="Dataset Icon" class="flow-icon">
       <h4>1. Dataset</h4>
       <p>Collect and prepare large datasets such as images, text, audio, or video for model training.</p>
     </div>
     <div class="flow-node">
-      <img src="images/icons/storage.png" alt="Storage Icon" class="flow-icon">
       <h4>2. Cloud Storage</h4>
       <p>Store datasets in scalable object storage such as Amazon S3, Azure Blob Storage, or Google Cloud Storage.</p>
     </div>
     <div class="flow-node">
-      <img src="images/icons/gpu.png" alt="Compute Icon" class="flow-icon">
       <h4>3. Compute Selection</h4>
       <p>Choose CPU, GPU, or TPU resources based on the model complexity and training workload.</p>
     </div>
     <div class="flow-node">
-      <img src="images/icons/training.png" alt="Training Icon" class="flow-icon">
       <h4>4. Model Training</h4>
       <p>Train neural networks using frameworks such as TensorFlow or PyTorch with cloud-based GPU/TPU acceleration.</p>
     </div>
     <div class="flow-node">
-      <img src="images/icons/tuning.png" alt="Tuning Icon" class="flow-icon">
       <h4>5. Hyperparameter Tuning</h4>
       <p>Optimize parameters such as learning rate, batch size, epochs, and optimizer to improve performance.</p>
     </div>
     <div class="flow-node">
-      <img src="images/icons/eval.png" alt="Evaluation Icon" class="flow-icon">
       <h4>6. Model Evaluation</h4>
       <p>Evaluate the model using validation/test data and metrics such as accuracy, precision, recall, and F1-score.</p>
     </div>
     <div class="flow-node">
-      <img src="images/icons/deploy_store.png" alt="Storage Icon" class="flow-icon">
       <h4>7. Model Storage</h4>
       <p>Store the trained model, weights, configurations, and results for deployment, versioning, or retraining.</p>
     </div>
@@ -332,7 +300,6 @@ li{
   <h2>Benefits & Requirements of Cloud-Based Deep Learning</h2>
   <div class="grid-2">
     <div class="card">
-      <img src="images/benefits_illustration.png" alt="Cloud Benefits" class="card-img">
       <h3>Benefits</h3>
       <ul>
         <li><b>Cost Efficiency:</b> Pay for resources based on usage.</li>
@@ -344,7 +311,6 @@ li{
       </ul>
     </div>
     <div class="card">
-      <img src="images/requirements_illustration.png" alt="Cloud Requirements" class="card-img">
       <h3>Requirements</h3>
       <ul>
         <li><b>Computing Power:</b> CPUs, GPUs, or TPUs.</li>
@@ -363,64 +329,55 @@ li{
   <h2>Cloud Platforms for Deep Learning Training & Deployment</h2>
   <div class="grid-3">
     <div class="card platform-card">
-      <img src="images/aws_logo.png" alt="AWS Logo" class="platform-logo">
       <h3>AWS</h3>
       <p><b>1. Amazon SageMaker:</b> Managed service for training, tuning, and deploying Deep Learning models.</p>
       <p><b>2. Amazon EC2:</b> GPU-enabled virtual machines for custom and large-scale model training.</p>
       <p><b>3. Amazon S3:</b> Scalable storage for datasets, trained models, and checkpoints.</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best suited for:</b> Flexible and large-scale Deep Learning workloads.</p>
+      <p style="color:#1e40af; font-size:15px; margin-top:8px;"><b>Best suited for:</b> Flexible and large-scale Deep Learning workloads.</p>
     </div>
     <div class="card platform-card">
-      <img src="images/azure_logo.png" alt="Microsoft Azure Logo" class="platform-logo">
       <h3>Microsoft Azure</h3>
       <p><b>1. Azure Machine Learning:</b> Platform for model training, deployment, and MLOps.</p>
       <p><b>2. Azure Virtual Machines:</b> Provides GPU-based computing for Deep Learning training.</p>
       <p><b>3. Azure Blob Storage:</b> Stores large datasets, models, and training outputs.</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best suited for:</b> Enterprise Deep Learning applications.</p>
+      <p style="color:#1e40af; font-size:15px; margin-top:8px;"><b>Best suited for:</b> Enterprise Deep Learning applications.</p>
     </div>
     <div class="card platform-card">
-      <img src="images/gcp_logo.png" alt="Google Cloud Logo" class="platform-logo">
       <h3>Google Cloud</h3>
       <p><b>1. Vertex AI:</b> Managed platform for training, deploying, and monitoring ML/DL models.</p>
       <p><b>2. Compute Engine:</b> Provides GPU and TPU resources for high performance training.</p>
       <p><b>3. Cloud Storage:</b> Stores datasets, models, and experiment results.</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best suited for:</b> AI development, research, and large-scale ML workloads.</p>
+      <p style="color:#1e40af; font-size:15px; margin-top:8px;"><b>Best suited for:</b> AI development, research, and large-scale ML workloads.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 5 -->
+<!-- SLIDE 5: Combined Deployment Paradigms & Architecture -->
 <section class="slide">
-  <h2>Deploying Deep Learning Models in the Cloud</h2>
+  <h2>Deploying Deep Learning Models: Architecture & Paradigms</h2>
   
-  <!-- Architecture image for Deployment -->
-  <img src="Trained-model.png" alt="Trained Model Deployment Architecture" class="hero-img">
+  <img src="trained-model.png" alt="Trained Model Architecture" class="slide-img" style="max-height: 180px;">
 
   <div class="grid">
     <div class="card">
-      <img src="images/deployment_vm.png" alt="Virtual Machines" class="card-img">
       <h3>1. Virtual Machines</h3>
       <p>Run the trained model on cloud servers such as AWS EC2 or Azure Virtual Machines.</p>
     </div>
     <div class="card">
-      <img src="images/deployment_docker.png" alt="Containers Docker" class="card-img">
       <h3>2. Containers</h3>
       <p>Package the model, libraries, and dependencies using Docker for consistent deployment.</p>
     </div>
     <div class="card">
-      <img src="images/deployment_managed.png" alt="Managed Services" class="card-img">
       <h3>3. Managed ML Services</h3>
       <p>Use platforms such as AWS SageMaker, Azure Machine Learning, or Google Vertex AI to simplify deployment and scaling.</p>
     </div>
     <div class="card">
-      <img src="images/deployment_serverless.png" alt="Serverless Architecture" class="card-img">
       <h3>4. Serverless Deployment</h3>
       <p>Run lightweight inference tasks without managing the underlying servers.</p>
     </div>
-    <div class="card" style="grid-column: 1 / -1;">
-      <img src="images/api_serving.png" alt="Model Serving via API Endpoint" class="card-img" style="max-height:180px;">
-      <h3>5. Model Serving</h3>
-      <p>After deployment, the model is exposed through an API endpoint.</p>
+    <div class="card" style="grid-column: 1 / -1; border-left: 5px solid #1e40af; background: #eff6ff;">
+      <h3>5. Model Serving Architecture</h3>
+      <p style="font-size: 18px; font-weight: 600; color: #1e3a8a; margin: 0;">After deployment, the model is exposed through an API endpoint for real-time inference and client applications.</p>
     </div>
   </div>
 </section>
@@ -428,9 +385,11 @@ li{
 <!-- SLIDE 6 -->
 <section class="slide">
   <h2>Real-World Example: Traffic Prediction</h2>
+  
+  <img src="example.png" alt="Real-World Traffic Prediction Example" class="slide-img" style="max-height: 180px;">
+
   <div class="grid-2">
     <div class="card">
-      <img src="Example.png" alt="Real World Traffic Prediction Model Architecture" class="card-img" style="max-height:180px;">
       <h3>Pipeline Steps</h3>
       <ol>
         <li><b>Data Collection:</b> Collect data from GPS signals, historical traffic, road conditions, and user activity.</li>
@@ -441,10 +400,9 @@ li{
       </ol>
     </div>
     <div class="accent-box">
-      <img src="trained-model.png" alt="Traffic Prediction Model Inference Map" class="hero-img" style="max-height:180px;">
       <h3>Inference & Retraining</h3>
       <p><b>6. Prediction:</b> User selects a route &rarr; Cloud model analyzes current conditions &rarr; Predicts travel time and traffic.</p>
-      <div class="highlight" style="margin:12px 0;">Example: Mumbai &rarr; Thane &rarr; Predicted travel time: 70 minutes</div>
+      <div class="highlight" style="margin:14px 0;">Example: Mumbai &rarr; Thane &rarr; Predicted travel time: 70 minutes</div>
       <p><b>7. Retraining:</b> New traffic data is continuously collected to improve the model.</p>
     </div>
   </div>
@@ -455,32 +413,26 @@ li{
   <h2>Challenges and Considerations</h2>
   <div class="grid">
     <div class="card">
-      <img src="images/icons/cost.png" alt="Cost Management" class="flow-icon">
       <h3>Cost Management</h3>
       <p>GPU/TPU usage can become expensive during long training sessions or high-volume inference.</p>
     </div>
     <div class="card">
-      <img src="images/icons/security.png" alt="Data Security" class="flow-icon">
       <h3>Data Privacy & Security</h3>
       <p>Sensitive datasets and trained models require encryption, authentication, and access control.</p>
     </div>
     <div class="card">
-      <img src="images/icons/lockin.png" alt="Vendor Lock-in" class="flow-icon">
       <h3>Vendor Lock-In</h3>
       <p>Models and applications may become dependent on services offered by a particular cloud provider.</p>
     </div>
     <div class="card">
-      <img src="images/icons/network.png" alt="Network Latency" class="flow-icon">
       <h3>Network Dependency</h3>
       <p>Large datasets require high bandwidth, and network latency can affect data transfer and real-time inference.</p>
     </div>
     <div class="card">
-      <img src="images/icons/resources.png" alt="Resource Management" class="flow-icon">
       <h3>Resource Management</h3>
       <p>Choosing the right GPU/CPU, storage, and scaling configuration is important for performance and cost.</p>
     </div>
     <div class="card">
-      <img src="images/icons/performance.png" alt="Model Performance" class="flow-icon">
       <h3>Model Performance</h3>
       <p>Deployed models require continuous monitoring, retraining, and version management as data changes.</p>
     </div>
@@ -490,7 +442,6 @@ li{
 <!-- SLIDE 8 -->
 <section class="slide">
   <h2>Conclusion</h2>
-  <img src="images/cloud_ai_summary.png" alt="Cloud AI Overview Summary" class="hero-img">
   <div class="accent-box">
     <ul>
       <li>Cloud computing provides scalable and on-demand infrastructure for Deep Learning.</li>
