@@ -75,7 +75,7 @@ li {
   margin-bottom: 6px;
 }
 
-/* Image Rules - Preserves Ratio & Prevents Bounds Overflow */
+/* Image Ratio & Bounds Protection */
 img {
   max-width: 100%;
   height: auto;
@@ -85,12 +85,12 @@ img {
 
 .hero-img {
   width: 100%;
-  max-height: 260px;
+  max-height: 280px;
   object-fit: contain;
   border-radius: 8px;
   margin: 16px 0;
   background: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cbd5e1;
   padding: 8px;
 }
 
@@ -278,8 +278,6 @@ img {
     <div class="author-details">M.Sc. Computer Science | Roll no - 11</div>
   </div>
 
-  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="Cloud Deep Learning Architecture" class="hero-img">
-
   <div class="accent-box">
     <p><b>Cloud Computing:</b> On-demand delivery of compute power, storage, and networking over the Internet.</p>
     <p><b>Deep Learning (DL):</b> A subfield of AI using multi-layered neural networks to learn patterns from vast datasets.</p>
@@ -290,9 +288,6 @@ img {
 <!-- SLIDE 2 -->
 <section class="slide">
   <h2>Cloud-Based Deep Learning Workflow</h2>
-  
-  <!-- Uses Trained-model.png or falls back seamlessly if not locally present -->
-  <img src="Trained-model.png" alt="Deep Learning Architecture & Trained Model Workflow" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200'">
 
   <div class="flow-container">
     <div class="flow-node">
@@ -375,7 +370,6 @@ img {
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" class="platform-logo">
       <h3>Microsoft Azure</h3>
       <p><b>Azure ML Studio:</b> MLOps workflow tools for training and pipeline tracking.</p>
-
       <p><b>Azure N-Series VMs:</b> High-performance GPU computing instances.</p>
       <p><b>Azure Blob Storage:</b> Object storage designed for enterprise data workloads.</p>
     </div>
@@ -392,6 +386,9 @@ img {
 <!-- SLIDE 5 -->
 <section class="slide">
   <h2>Deploying Deep Learning Models in the Cloud</h2>
+  
+  <img src="Trained-model.png" alt="Trained Model Deployment Architecture" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98aedd04e11?q=80&w=1200'">
+
   <div class="grid">
     <div class="card">
       <h3>1. Virtual Machines</h3>
@@ -415,6 +412,9 @@ img {
 <!-- SLIDE 6 -->
 <section class="slide">
   <h2>Real-World Example: Traffic Prediction</h2>
+  
+  <img src="example.png" alt="Real World Traffic Prediction Example Architecture" class="hero-img" onerror="this.src='example.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1508873696983-2df515122519?q=80&w=1200'};">
+
   <div class="grid-2">
     <div class="card">
       <h3>Pipeline Workflow</h3>
