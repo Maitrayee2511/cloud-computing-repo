@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cloud Computing for Deep Learning</title>
+<title>Cloud Computing for Training and Deploying Deep Learning Models</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
@@ -140,11 +140,10 @@ li{
 
 .diagram-svg{
   width:100%;
-  max-height:260px;
+  max-height:240px;
   height:auto;
 }
 
-/* Slide 2 Specific Styling - Larger Text & Clear Visibility */
 #slide2 .flow-container{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
@@ -162,14 +161,14 @@ li{
 
 #slide2 .flow-node h4{
   margin:0 0 8px;
-  font-size:22px;
+  font-size:20px;
   color:#1e40af;
   font-weight:800;
 }
 
 #slide2 .flow-node p{
   margin:0;
-  font-size:17px;
+  font-size:16px;
   line-height:1.5;
   color:#1e293b;
   font-weight:500;
@@ -305,216 +304,196 @@ li{
   </div>
 
   <div class="accent-box">
-    <p><b>Cloud Computing:</b> On-demand access to virtualized compute, storage, and networking over the internet.</p>
-    <p><b>Deep Learning:</b> Multi-layered neural networks trained on large complex datasets.</p>
-    <div class="highlight">Cloud infrastructure provides the required hardware acceleration and scalable storage for DL workflows.</div>
+    <p><b>Cloud Computing:</b> The delivery of computing resources such as servers, storage, networking, and processing power over the Internet on an on-demand basis.</p>
+    <p><b>Deep Learning (DL):</b> A branch of Machine Learning that uses multi-layered neural networks to learn complex patterns from large datasets.</p>
+    <div class="highlight">Cloud provides the infrastructure; Deep Learning provides the intelligence.</div>
   </div>
 </section>
 
-<!-- SLIDE 2: Pipeline (With Image & Larger Font) -->
+<!-- SLIDE 2: Workflow / Pipeline -->
 <section class="slide" id="slide2">
-  <h2>Deep Learning Pipeline in Cloud</h2>
+  <h2>Cloud-Based Deep Learning Workflow</h2>
   
   <div class="diagram-wrapper">
-    <svg class="diagram-svg" viewBox="0 0 900 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- 7 Stage Flow Diagram -->
-      <g transform="translate(10, 20)">
+    <svg class="diagram-svg" viewBox="0 0 900 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(10, 25)">
         <!-- Step 1 -->
-        <rect x="0" y="20" width="105" height="50" rx="8" fill="#1E40AF"/>
-        <text x="52" y="50" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">1. Ingestion</text>
-        <path d="M110 45 L125 45" stroke="#2563EB" stroke-width="3" marker-end="url(#arrow)"/>
+        <rect x="0" y="0" width="105" height="50" rx="8" fill="#1E40AF"/>
+        <text x="52" y="30" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">1. Dataset</text>
+        <path d="M110 25 L125 25" stroke="#2563EB" stroke-width="3"/>
 
         <!-- Step 2 -->
-        <rect x="130" y="20" width="105" height="50" rx="8" fill="#2563EB"/>
-        <text x="182" y="50" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">2. Storage</text>
-        <path d="M240 45 L255 45" stroke="#2563EB" stroke-width="3"/>
+        <rect x="130" y="0" width="105" height="50" rx="8" fill="#2563EB"/>
+        <text x="182" y="30" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">2. Cloud Storage</text>
+        <path d="M240 25 L255 25" stroke="#2563EB" stroke-width="3"/>
 
         <!-- Step 3 -->
-        <rect x="260" y="20" width="105" height="50" rx="8" fill="#3B82F6"/>
-        <text x="312" y="50" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">3. Processing</text>
-        <path d="M370 45 L385 45" stroke="#2563EB" stroke-width="3"/>
+        <rect x="260" y="0" width="105" height="50" rx="8" fill="#3B82F6"/>
+        <text x="312" y="30" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">3. Compute</text>
+        <path d="M370 25 L385 25" stroke="#2563EB" stroke-width="3"/>
 
         <!-- Step 4 -->
-        <rect x="390" y="20" width="105" height="50" rx="8" fill="#1E40AF"/>
-        <text x="442" y="50" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">4. Provisioning</text>
-        <path d="M500 45 L515 45" stroke="#2563EB" stroke-width="3"/>
+        <rect x="390" y="0" width="105" height="50" rx="8" fill="#1E40AF"/>
+        <text x="442" y="30" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">4. Training</text>
+        <path d="M500 25 L515 25" stroke="#2563EB" stroke-width="3"/>
 
         <!-- Step 5 -->
-        <rect x="520" y="20" width="105" height="50" rx="8" fill="#2563EB"/>
-        <text x="572" y="50" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">5. Training</text>
-        <path d="M630 45 L645 45" stroke="#2563EB" stroke-width="3"/>
+        <rect x="520" y="0" width="105" height="50" rx="8" fill="#2563EB"/>
+        <text x="572" y="30" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">5. Tuning</text>
+        <path d="M630 25 L645 25" stroke="#2563EB" stroke-width="3"/>
 
         <!-- Step 6 -->
-        <rect x="650" y="20" width="105" height="50" rx="8" fill="#3B82F6"/>
-        <text x="702" y="50" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">6. Optimize</text>
-        <path d="M760 45 L775 45" stroke="#2563EB" stroke-width="3"/>
+        <rect x="650" y="0" width="105" height="50" rx="8" fill="#3B82F6"/>
+        <text x="702" y="30" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">6. Evaluation</text>
+        <path d="M760 25 L775 25" stroke="#2563EB" stroke-width="3"/>
 
         <!-- Step 7 -->
-        <rect x="780" y="20" width="100" height="50" rx="8" fill="#0F2942"/>
-        <text x="830" y="50" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">7. Deploy</text>
+        <rect x="780" y="0" width="100" height="50" rx="8" fill="#0F2942"/>
+        <text x="830" y="30" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">7. Storage/Deploy</text>
       </g>
     </svg>
   </div>
 
   <div class="flow-container">
     <div class="flow-node">
-      <h4>1. Ingestion</h4>
-      <p>Collect structured and unstructured raw data streams.</p>
+      <h4>1. Dataset</h4>
+      <p>Collect and prepare large datasets such as images, text, audio, or video for model training.</p>
     </div>
     <div class="flow-node">
-      <h4>2. Storage</h4>
-      <p>Store datasets in cloud object stores (S3, Blob, GCS).</p>
+      <h4>2. Cloud Storage</h4>
+      <p>Store datasets in scalable object storage such as Amazon S3, Azure Blob Storage, or Google Cloud Storage.</p>
     </div>
     <div class="flow-node">
-      <h4>3. Processing</h4>
-      <p>Clean and format data using distributed ETL engines.</p>
+      <h4>3. Compute Selection</h4>
+      <p>Choose CPU, GPU, or TPU resources based on the model complexity and training workload.</p>
     </div>
     <div class="flow-node">
-      <h4>4. Provisioning</h4>
-      <p>Allocate GPU and TPU hardware resources.</p>
+      <h4>4. Model Training</h4>
+      <p>Train neural networks using frameworks such as TensorFlow or PyTorch with cloud GPU/TPU acceleration.</p>
     </div>
     <div class="flow-node">
-      <h4>5. Training</h4>
-      <p>Execute multi-node distributed model training.</p>
+      <h4>5. Hyperparameter Tuning</h4>
+      <p>Optimize parameters such as learning rate, batch size, epochs, and optimizer to improve performance.</p>
     </div>
     <div class="flow-node">
-      <h4>6. Optimization</h4>
-      <p>Apply hyperparameter search, pruning, and quantization.</p>
+      <h4>6. Model Evaluation</h4>
+      <p>Evaluate the model using validation/test data and metrics such as accuracy, precision, recall, and F1-score.</p>
     </div>
     <div class="flow-node">
-      <h4>7. Deployment</h4>
-      <p>Serve predictions via managed API endpoints.</p>
+      <h4>7. Model Storage</h4>
+      <p>Store the trained model, weights, configurations, and results for deployment, versioning, or retraining.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 3: Infrastructure -->
+<!-- SLIDE 3: Benefits & Requirements -->
 <section class="slide">
-  <h2>Compute & Storage Architecture</h2>
+  <h2>Benefits & Requirements of Cloud-Based Deep Learning</h2>
   <div class="grid-2">
     <div class="card">
-      <h3>Compute Hardware</h3>
+      <h3>Benefits</h3>
       <ul>
-        <li><b>GPUs:</b> High parallel processing for tensor operations.</li>
-        <li><b>TPUs:</b> Google ASICs engineered for deep neural networks.</li>
-        <li><b>CPUs:</b> Preprocessing, orchestration, and light inference.</li>
-        <li><b>Scaling:</b> Data and Model Parallelism across nodes.</li>
+        <li><b>Cost Efficiency:</b> Pay for resources based on usage without upfront hardware CapEx.</li>
+        <li><b>Scalability:</b> Dynamically increase or decrease computing resources as needed.</li>
+        <li><b>Faster Training:</b> High-performance cloud GPUs/TPUs accelerate model execution.</li>
+        <li><b>Large-Scale Storage:</b> Store and process petabytes of unstructured datasets.</li>
+        <li><b>Accessibility:</b> Seamless access to models and pipelines from anywhere globally.</li>
+        <li><b>Easy Deployment:</b> Quickly publish trained models as cloud APIs and microservices.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Storage Layer</h3>
+      <h3>Requirements</h3>
       <ul>
-        <li><b>Object Storage:</b> Low-cost storage for datasets and weights.</li>
-        <li><b>Block Storage:</b> Fast, low-latency drives for training loops.</li>
-        <li><b>Shared Filesystems:</b> High-throughput cluster access (e.g., EFS).</li>
+        <li><b>Computing Power:</b> High-performance hardware acceleration (CPUs, GPUs, TPUs).</li>
+        <li><b>Storage Layer:</b> Scalable object and block storage for datasets and weights.</li>
+        <li><b>Network:</b> Reliable, high-bandwidth interconnects for multi-node training.</li>
+        <li><b>Security:</b> Robust data protection, IAM controls, and end-to-end encryption.</li>
+        <li><b>Monitoring:</b> Real-time tracking of resource usage, performance, and model drift.</li>
+        <li><b>Tools & Frameworks:</b> TensorFlow, PyTorch, Jupyter, Docker, and cloud MLOps suites.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 4: Benefits & Requirements -->
+<!-- SLIDE 4: Cloud Platforms -->
 <section class="slide">
-  <h2>Benefits & Key Requirements</h2>
-  <div class="grid-2">
-    <div class="card">
-      <h3>Core Benefits</h3>
-      <ul>
-        <li><b>Cost Efficiency:</b> Pay-as-you-go pricing removes hardware CapEx.</li>
-        <li><b>Elasticity:</b> Scale compute resources up or down on demand.</li>
-        <li><b>Speed:</b> Faster iteration with high-performance hardware.</li>
-        <li><b>Reliability:</b> Built-in backups, redundancy, and high availability.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>System Requirements</h3>
-      <ul>
-        <li><b>Network Interconnects:</b> High-bandwidth fabrics for node syncing.</li>
-        <li><b>Data Security:</b> Role-based access (IAM) and encryption.</li>
-        <li><b>MLOps Stack:</b> Experiment tracking and lineage logging.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SLIDE 5: Ecosystem -->
-<section class="slide">
-  <h2>Major Cloud Providers</h2>
+  <h2>Cloud Platforms for Deep Learning Training & Deployment</h2>
   <div class="grid-3">
     <div class="card platform-card">
       <h3>AWS</h3>
-      <p><b>Platform:</b> Amazon SageMaker</p>
-      <p><b>Compute:</b> EC2 P4/P5 (NVIDIA GPUs), Trainium</p>
-      <p><b>Storage:</b> S3, FSx for Lustre</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> Large enterprise ML deployments.</p>
+      <p><b>1. Amazon SageMaker:</b> Fully managed platform for building, training, tuning, and deploying models.</p>
+      <p><b>2. Amazon EC2:</b> Scalable GPU-enabled virtual machines (P4/P5, Trainium) for custom training.</p>
+      <p><b>3. Amazon S3:</b> High-durability object storage for training datasets, checkpoints, and models.</p>
+      <p style="color:#1e40af; font-size:15px; margin-top:10px;"><b>Best suited for:</b> Flexible, enterprise, and large-scale Deep Learning workloads.</p>
     </div>
     <div class="card platform-card">
       <h3>Microsoft Azure</h3>
-      <p><b>Platform:</b> Azure Machine Learning</p>
-      <p><b>Compute:</b> NC & ND-Series GPU VMs</p>
-      <p><b>Storage:</b> Azure Blob Storage, Data Lake</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> Microsoft stack integration.</p>
+      <p><b>1. Azure Machine Learning:</b> End-to-end MLOps platform for model management and deployment.</p>
+      <p><b>2. Azure Virtual Machines:</b> High-throughput NC & ND-series GPU VMs for neural networks.</p>
+      <p><b>3. Azure Blob Storage:</b> Secure storage for massive unstructured datasets and artifacts.</p>
+      <p style="color:#1e40af; font-size:15px; margin-top:10px;"><b>Best suited for:</b> Enterprise applications and Microsoft ecosystem integration.</p>
     </div>
     <div class="card platform-card">
       <h3>Google Cloud</h3>
-      <p><b>Platform:</b> Vertex AI</p>
-      <p><b>Compute:</b> Cloud TPU v4/v5e, GPU instances</p>
-      <p><b>Storage:</b> Cloud Storage, BigQuery</p>
-      <p style="color:#1e40af; font-size:14px; margin-top:8px;"><b>Best for:</b> TPU research & LLM training.</p>
+      <p><b>1. Vertex AI:</b> Unified ML platform to simplify training, hosting, and monitoring AI models.</p>
+      <p><b>2. Compute Engine:</b> Flexible GPU instances and Cloud TPUs (v4/v5e) engineered for deep learning.</p>
+      <p><b>3. Cloud Storage:</b> High-performance storage for training data, logs, and experiment results.</p>
+      <p style="color:#1e40af; font-size:15px; margin-top:10px;"><b>Best suited for:</b> Advanced AI research, LLM training, and TPU-accelerated jobs.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 6: Combined Deployment Paradigms & Architecture (With Diagram Image) -->
+<!-- SLIDE 5: Deployment Paradigms & Architecture -->
 <section class="slide">
-  <h2>Deployment Architecture & Paradigms</h2>
+  <h2>Deploying Deep Learning Models: Architecture & Paradigms</h2>
   
   <div class="diagram-wrapper">
-    <svg class="diagram-svg" viewBox="0 0 850 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="850" height="180" rx="8" fill="#F8FAFC"/>
+    <svg class="diagram-svg" viewBox="0 0 850 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="850" height="160" rx="8" fill="#F8FAFC"/>
       <!-- Training Layer -->
-      <g transform="translate(30, 25)">
+      <g transform="translate(30, 15)">
         <rect width="160" height="130" rx="6" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
-        <text x="80" y="30" fill="#1E40AF" font-size="14" font-weight="bold" text-anchor="middle">Model Training</text>
+        <text x="80" y="30" fill="#1E40AF" font-size="13" font-weight="bold" text-anchor="middle">Trained Model</text>
         <rect x="20" y="45" width="120" height="30" rx="4" fill="#2563EB"/>
-        <text x="80" y="65" fill="#FFFFFF" font-size="12" text-anchor="middle">Cloud GPUs / TPUs</text>
+        <text x="80" y="65" fill="#FFFFFF" font-size="11" text-anchor="middle">Cloud GPUs / TPUs</text>
         <rect x="20" y="85" width="120" height="30" rx="4" fill="#1E40AF"/>
-        <text x="80" y="105" fill="#FFFFFF" font-size="12" text-anchor="middle">Model Weights (.pth/.pt)</text>
+        <text x="80" y="105" fill="#FFFFFF" font-size="11" text-anchor="middle">Weights (.pth / .onnx)</text>
       </g>
 
       <!-- Arrow -->
-      <path d="M205 90 L245 90" stroke="#1E40AF" stroke-width="3" stroke-dasharray="4 4"/>
-      <polygon points="245,85 255,90 245,95" fill="#1E40AF"/>
+      <path d="M205 80 L245 80" stroke="#1E40AF" stroke-width="3" stroke-dasharray="4 4"/>
+      <polygon points="245,75 255,80 245,85" fill="#1E40AF"/>
 
       <!-- Deployment Packaging Layer -->
-      <g transform="translate(260, 25)">
+      <g transform="translate(260, 15)">
         <rect width="320" height="130" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
-        <text x="160" y="25" fill="#0F2942" font-size="14" font-weight="bold" text-anchor="middle">Cloud Serving Options</text>
+        <text x="160" y="25" fill="#0F2942" font-size="13" font-weight="bold" text-anchor="middle">Serving Paradigms</text>
         
         <rect x="15" y="40" width="135" height="35" rx="4" fill="#EFF6FF" stroke="#2563EB"/>
-        <text x="82" y="62" fill="#1E40AF" font-size="12" font-weight="bold" text-anchor="middle">Docker Containers</text>
+        <text x="82" y="62" fill="#1E40AF" font-size="11" font-weight="bold" text-anchor="middle">Docker Containers</text>
         
         <rect x="170" y="40" width="135" height="35" rx="4" fill="#EFF6FF" stroke="#2563EB"/>
-        <text x="237" y="62" fill="#1E40AF" font-size="12" font-weight="bold" text-anchor="middle">Managed Endpoints</text>
+        <text x="237" y="62" fill="#1E40AF" font-size="11" font-weight="bold" text-anchor="middle">Managed Endpoints</text>
 
         <rect x="15" y="85" width="135" height="35" rx="4" fill="#EFF6FF" stroke="#2563EB"/>
-        <text x="82" y="107" fill="#1E40AF" font-size="12" font-weight="bold" text-anchor="middle">Virtual Machines</text>
+        <text x="82" y="107" fill="#1E40AF" font-size="11" font-weight="bold" text-anchor="middle">Virtual Machines</text>
 
         <rect x="170" y="85" width="135" height="35" rx="4" fill="#EFF6FF" stroke="#2563EB"/>
-        <text x="237" y="107" fill="#1E40AF" font-size="12" font-weight="bold" text-anchor="middle">Serverless Functions</text>
+        <text x="237" y="107" fill="#1E40AF" font-size="11" font-weight="bold" text-anchor="middle">Serverless Functions</text>
       </g>
 
       <!-- Arrow -->
-      <path d="M595 90 L635 90" stroke="#1E40AF" stroke-width="3"/>
-      <polygon points="635,85 645,90 635,95" fill="#1E40AF"/>
+      <path d="M595 80 L635 80" stroke="#1E40AF" stroke-width="3" stroke-dasharray="4 4"/>
+      <polygon points="635,75 645,80 635,85" fill="#1E40AF"/>
 
-      <!-- API Gateway & Client -->
-      <g transform="translate(650, 25)">
-        <rect width="170" height="130" rx="6" fill="#1E40AF"/>
-        <text x="85" y="40" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle">API Gateway</text>
-        <rect x="20" y="60" width="130" height="2" fill="#60A5FA"/>
-        <text x="85" y="85" fill="#BFDBFE" font-size="12" text-anchor="middle">REST / gRPC API</text>
-        <rect x="25" y="98" width="120" height="24" rx="4" fill="#2563EB"/>
-        <text x="85" y="114" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">Client Application</text>
+      <!-- Client Layer -->
+      <g transform="translate(650, 15)">
+        <rect width="170" height="130" rx="6" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+        <text x="85" y="30" fill="#1E40AF" font-size="13" font-weight="bold" text-anchor="middle">Client Consumption</text>
+        <rect x="20" y="50" width="130" height="30" rx="4" fill="#1E40AF"/>
+        <text x="85" y="70" fill="#FFFFFF" font-size="11" text-anchor="middle">REST / gRPC APIs</text>
+        <rect x="20" y="88" width="130" height="30" rx="4" fill="#2563EB"/>
+        <text x="85" y="108" fill="#FFFFFF" font-size="11" text-anchor="middle">Web / Mobile Apps</text>
       </g>
     </svg>
   </div>
@@ -522,140 +501,105 @@ li{
   <div class="grid">
     <div class="card">
       <h3>1. Virtual Machines</h3>
-      <p>Full OS control on IaaS (EC2/Azure VMs). Requires manual maintenance.</p>
+      <p>Run trained models on customizable cloud servers like AWS EC2 or Azure VMs with full root-level control.</p>
     </div>
     <div class="card">
       <h3>2. Containers</h3>
-      <p>Package models with Docker; manage scaling via Kubernetes (EKS/GKE).</p>
+      <p>Package the model, code, and CUDA libraries using Docker for consistent, portable deployments via Kubernetes.</p>
     </div>
     <div class="card">
-      <h3>3. Managed Endpoints</h3>
-      <p>Platform-managed hosting (SageMaker/Vertex) with auto-scaling.</p>
+      <h3>3. Managed ML Services</h3>
+      <p>Leverage AWS SageMaker, Azure ML, or Vertex AI endpoints for automated scaling, load balancing, and zero downtime.</p>
     </div>
     <div class="card">
-      <h3>4. Serverless</h3>
-      <p>On-demand execution (AWS Lambda) for infrequent, low-latency requests.</p>
+      <h3>4. Serverless Deployment</h3>
+      <p>Execute lightweight inference tasks on event-driven platforms without provisioning underlying infrastructure.</p>
     </div>
-    <div class="card" style="grid-column: 1 / -1; border-left: 5px solid #1e40af; background:#eff6ff;">
-      <h3>5. Model Serving Endpoint</h3>
-      <p style="margin:0; font-weight:600; color:#1e3a8a;">After deployment, the model is exposed as a scalable REST/gRPC API endpoint for real-time client inference.</p>
+    <div class="card" style="grid-column: 1 / -1; border-left: 5px solid #1e40af; background: #eff6ff;">
+      <h3>5. Model Serving Architecture</h3>
+      <p style="font-size: 17px; font-weight: 600; color: #1e3a8a; margin: 0;">Once deployed, models expose REST or gRPC endpoints to handle client inference requests with minimal latency.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 7: Real-World Example Case Study (With Diagram Image First) -->
+<!-- SLIDE 6: Real-World Example -->
 <section class="slide">
-  <h2>Case Study: Traffic Prediction System</h2>
+  <h2>Real-World Example: Traffic Prediction</h2>
   
-  <div class="diagram-wrapper">
-    <svg class="diagram-svg" viewBox="0 0 850 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="850" height="180" rx="8" fill="#F8FAFC"/>
-      
-      <!-- Sensor Data Ingestion -->
-      <g transform="translate(20, 30)">
-        <rect width="160" height="120" rx="6" fill="#1E40AF"/>
-        <text x="80" y="30" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">1. Telemetry Ingestion</text>
-        <text x="80" y="55" fill="#BFDBFE" font-size="11" text-anchor="middle">• GPS Signals</text>
-        <text x="80" y="75" fill="#BFDBFE" font-size="11" text-anchor="middle">• Road Conditions</text>
-        <text x="80" y="95" fill="#BFDBFE" font-size="11" text-anchor="middle">• Kafka / Kinesis Stream</text>
-      </g>
-
-      <!-- Arrow -->
-      <path d="M185 90 L215 90" stroke="#2563EB" stroke-width="3"/>
-
-      <!-- Cloud Training -->
-      <g transform="translate(220, 30)">
-        <rect width="180" height="120" rx="6" fill="#2563EB"/>
-        <text x="90" y="30" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">2. Cloud DL Training</text>
-        <text x="90" y="55" fill="#EFF6FF" font-size="11" text-anchor="middle">• Spatial-Temporal GNN</text>
-        <text x="90" y="75" fill="#EFF6FF" font-size="11" text-anchor="middle">• Multi-GPU Cluster</text>
-        <text x="90" y="95" fill="#EFF6FF" font-size="11" text-anchor="middle">• TensorFlow / PyTorch</text>
-      </g>
-
-      <!-- Arrow -->
-      <path d="M405 90 L435 90" stroke="#2563EB" stroke-width="3"/>
-
-      <!-- Cloud Deployment & Prediction -->
-      <g transform="translate(440, 30)">
-        <rect width="180" height="120" rx="6" fill="#3B82F6"/>
-        <text x="90" y="30" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">3. Real-Time Inference</text>
-        <text x="90" y="55" fill="#FFFFFF" font-size="11" text-anchor="middle">• Route: Mumbai &rarr; Thane</text>
-        <rect x="15" y="68" width="150" height="24" rx="4" fill="#0F2942"/>
-        <text x="90" y="84" fill="#60A5FA" font-size="11" font-weight="bold" text-anchor="middle">ETA: 70 Minutes</text>
-        <text x="90" y="108" fill="#FFFFFF" font-size="10" text-anchor="middle">API Endpoint Response</text>
-      </g>
-
-      <!-- Arrow -->
-      <path d="M625 90 L655 90" stroke="#2563EB" stroke-width="3"/>
-
-      <!-- Continuous Retraining Loop -->
-      <g transform="translate(660, 30)">
-        <rect width="170" height="120" rx="6" fill="#EFF6FF" stroke="#1E40AF" stroke-width="2"/>
-        <text x="85" y="30" fill="#1E40AF" font-size="13" font-weight="bold" text-anchor="middle">4. Feedback Loop</text>
-        <text x="85" y="55" fill="#334155" font-size="11" text-anchor="middle">• Continuous Logs</text>
-        <text x="85" y="75" fill="#334155" font-size="11" text-anchor="middle">• Drift Detection</text>
-        <text x="85" y="95" fill="#1E40AF" font-size="11" font-weight="bold" text-anchor="middle">&circlearrowright; Auto-Retraining</text>
-      </g>
-    </svg>
-  </div>
-
   <div class="grid-2">
     <div class="card">
-      <h3>Training Pipeline</h3>
+      <h3>Pipeline Steps</h3>
       <ol>
-        <li>Stream telemetry data from GPS & road sensors.</li>
-        <li>Buffer incoming streams using Kafka/Kinesis.</li>
-        <li>Process tensors in Cloud Feature Store.</li>
-        <li>Train Spatial-Temporal GNN models on Cloud GPUs.</li>
+        <li><b>Data Collection:</b> Gather continuous real-time feeds from GPS signals, historical road congestion, and sensors.</li>
+        <li><b>Cloud Storage:</b> Stream raw telemetry data directly into Amazon S3, Azure Blob, or Google Cloud Storage.</li>
+        <li><b>Data Preprocessing:</b> Clean, normalize, and index route and geospatial data using cloud ETL tools.</li>
+        <li><b>Model Training:</b> Train spatio-temporal deep neural networks on cloud GPUs/TPUs using PyTorch or TensorFlow.</li>
+        <li><b>Model Deployment:</b> Host model endpoints using SageMaker or Vertex AI for real-time querying.</li>
       </ol>
     </div>
     <div class="accent-box">
-      <h3>Inference Loop & Retraining</h3>
-      <p><b>Query:</b> Route Mumbai to Thane</p>
-      <p><b>Prediction:</b> 70 Minutes travel time</p>
-      <div class="highlight" style="margin-top:10px;">Feedback Loop: Actual arrival times trigger automated retraining when model accuracy drifts.</div>
+      <h3>Inference & Retraining</h3>
+      <p><b>6. Real-Time Prediction:</b> A driver selects a destination &rarr; Cloud model evaluates live road conditions &rarr; Returns optimized travel time.</p>
+      
+      <div class="highlight" style="margin:16px 0; padding:12px; background:#ffffff; border-radius:8px; border:1px solid #bfdbfe;">
+        Route: Mumbai &rarr; Thane <br>
+        <span style="color:#2563eb; font-size:17px;">Predicted Travel Time: 70 Minutes</span>
+      </div>
+      
+      <p><b>7. Continuous Learning:</b> Ingestion of new telemetry feeds triggers scheduled retraining pipelines to improve prediction accuracy over time.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 8: Technical Challenges -->
+<!-- SLIDE 7: Challenges -->
 <section class="slide">
-  <h2>Key Challenges</h2>
+  <h2>Challenges and Considerations</h2>
   <div class="grid">
     <div class="card">
-      <h3>Cost Control</h3>
-      <p>High hardware usage. Mitigate using Spot instances and auto-scaling.</p>
+      <h3>Cost Management</h3>
+      <p>High-end GPU/TPU compute resources can quickly escalate expenses during multi-day training or high-frequency inference.</p>
     </div>
     <div class="card">
-      <h3>Latency & Bandwidth</h3>
-      <p>Large data movement costs time. APIs need under 100ms response times.</p>
+      <h3>Data Privacy & Security</h3>
+      <p>Handling sensitive enterprise or user data requires robust encryption at rest and in transit alongside strict IAM policies.</p>
     </div>
     <div class="card">
-      <h3>Data Security</h3>
-      <p>Requires strict IAM, encryption, and isolated VPC networks.</p>
+      <h3>Vendor Lock-In</h3>
+      <p>Heavy reliance on proprietary cloud services can make cross-platform migrations complex and costly.</p>
     </div>
     <div class="card">
-      <h3>Model Drift</h3>
-      <p>Accuracy degrades over time; requires continuous monitoring.</p>
+      <h3>Network Dependency</h3>
+      <p>Transferring massive multi-terabyte datasets requires high bandwidth, while network latency can affect real-time inference.</p>
+    </div>
+    <div class="card">
+      <h3>Resource Management</h3>
+      <p>Selecting the optimal instance types, spot instances, and auto-scaling policies is crucial to balance cost and speed.</p>
+    </div>
+    <div class="card">
+      <h3>Model Performance & Drift</h3>
+      <p>Production environments demand continuous performance monitoring, automated retraining pipelines, and version tracking.</p>
     </div>
   </div>
 </section>
 
-<!-- SLIDE 9: Summary -->
+<!-- SLIDE 8: Conclusion -->
 <section class="slide">
-  <h2>Summary</h2>
+  <h2>Conclusion</h2>
   <div class="accent-box">
     <ul>
-      <li>Cloud provides high-performance compute (GPUs/TPUs) on demand.</li>
-      <li>Elastic storage handles massive training datasets efficiently.</li>
-      <li>Managed platforms simplify MLOps from training to deployment.</li>
-      <li>Containerized & Serverless options enable flexible API hosting.</li>
+      <li>Cloud computing provides scalable, elastic, and on-demand infrastructure for modern Deep Learning.</li>
+      <li>Hardware accelerators (GPUs and TPUs) dramatically reduce training times for massive neural networks.</li>
+      <li>Scalable object storage effortlessly handles unstructured datasets, checkpoint files, and model artifacts.</li>
+      <li>Managed platforms (SageMaker, Azure ML, Vertex AI) streamline MLOps across training, tuning, and monitoring.</li>
+      <li>Models are seamlessly converted into high-availability APIs for low-latency production inference.</li>
     </ul>
-    <div class="highlight" style="margin-top:16px;">Cloud computing bridges the gap between AI research and production systems.</div>
+    <div class="highlight" style="margin-top:20px; font-size:20px;">
+      Overall, cloud computing democratizes Deep Learning—making advanced AI development faster, more scalable, and globally accessible.
+    </div>
   </div>
 </section>
 
-<!-- SLIDE 10: End Slide -->
+<!-- SLIDE 9: Thank You -->
 <section class="slide">
   <div style="text-align:center; margin:auto 0;">
     <h1 style="font-size:56px; color:#1e40af; margin-bottom:20px;">THANK YOU</h1>
